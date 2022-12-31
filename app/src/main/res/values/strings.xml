@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">THE SAVIOUR</string>
+    <string name="title_activity_askuser">askuser</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="new_user">NEW USER</string>
+    <string name="i_am_saviour">I AM SAVIOUR</string>
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="the">THE</string>
+    <string name="saviour">SAVIOUR</string>
+    <string name="your_own_body_gaurd">YOUR OWN BODY GAURD</string>
+    <string name="title_activity_login">login</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="title_activity_registeruser">REGISTERUSER</string>
+    <string name="title_activity_home">HOME</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main_home">main_home</string>
+    <string name="title_activity_afterlogin">afterlogin</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="tracking_enabled_notif" />
+</resources>

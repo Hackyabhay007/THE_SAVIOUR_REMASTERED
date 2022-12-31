@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "695103598236",
+    "project_id": "the-saviour-7b9a0",
+    "storage_bucket": "the-saviour-7b9a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695103598236:android:d5fcee36da9a9513fd0759",
+        "android_client_info": {
+          "package_name": "com.example.thesaviour"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "695103598236-lv0pr97or5e0bear790oqo9kbfi8f24g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDCgzFEsA4uwZ5tCXl-oG9NgjJhMVRyUh4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695103598236-lv0pr97or5e0bear790oqo9kbfi8f24g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

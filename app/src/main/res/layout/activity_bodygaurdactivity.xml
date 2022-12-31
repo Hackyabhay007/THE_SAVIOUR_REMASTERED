@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    tools:context=".bodygaurds">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/header_bodygaurd"
+        android:layout_width="392dp"
+        android:layout_height="88dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:text="ADD BODYGAURDS"
+        android:textAlignment="center"
+        android:textColor="@color/lighttext2"
+        android:textSize="48sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.473"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.48" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="108dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header_bodygaurd">
+
+        <EditText
+            android:id="@+id/bname"
+            style="@android:style/Widget.Holo.Light.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/feildbackground"
+            android:bufferType="editable"
+            android:drawableEnd="@drawable/user1"
+            android:drawablePadding="30dp"
+            android:drawableTint="@color/white"
+            android:ellipsize="start"
+            android:freezesText="false"
+            android:hint="FULL NAME"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:paddingRight="10dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/feildtextcolor"
+            android:textColorHint="@color/feildhint"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/bnumber"
+            style="@android:style/Widget.Holo.Light.EditText"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_margin="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/feildbackground"
+            android:bufferType="editable"
+            android:drawableEnd="@drawable/user1"
+            android:drawablePadding="30dp"
+            android:drawableTint="@color/white"
+            android:ellipsize="start"
+            android:freezesText="false"
+            android:hint="FULL NAME"
+            android:inputType="number"
+            android:padding="20dp"
+            android:paddingRight="10dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/feildtextcolor"
+            android:textColorHint="@color/feildhint"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/addprotector"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@drawable/feildbackground"
+            android:fontFamily="sans-serif-black"
+            android:text="Add Protector"
+            android:textColor="@color/bigbtntxtcolor"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/bcktosetting"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:background="@drawable/feildbackground"
+            android:fontFamily="sans-serif-black"
+            android:padding="20dp"
+            android:text="HOME"
+            android:textColor="@color/bigbtntxtcolor"
+            android:textSize="24sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

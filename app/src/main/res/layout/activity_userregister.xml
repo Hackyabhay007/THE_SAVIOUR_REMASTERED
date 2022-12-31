@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    tools:context=".userregister">
+
+    <TextView
+        android:id="@+id/textView42"
+        android:layout_width="377dp"
+        android:layout_height="98dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="sans-serif-black"
+        android:paddingStart="40dp"
+        android:paddingTop="40dp"
+        android:paddingEnd="79dp"
+        android:text="REGISTER"
+        android:textAlignment="center"
+        android:textColor="@color/hardtext"
+        android:textSize="34sp"
+        app:drawableStartCompat="@drawable/registerhead"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="316dp"
+        android:layout_height="417dp"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView42">
+
+        <EditText
+            android:id="@+id/fullname"
+            style="@android:style/Widget.Holo.Light.EditText"
+            android:layout_width="315dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/feildbackground"
+            android:bufferType="editable"
+            android:drawableEnd="@drawable/user1"
+            android:drawablePadding="30dp"
+            android:drawableTint="@color/white"
+            android:ellipsize="start"
+            android:freezesText="false"
+            android:hint="FULL NAME"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:paddingRight="10dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/feildtextcolor"
+            android:textColorHint="@color/feildhint"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/email"
+            style="@android:style/Widget.Holo.Light.EditText"
+            android:layout_width="315dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/feildbackground"
+            android:bufferType="editable"
+            android:drawableEnd="@drawable/mail2"
+            android:drawablePadding="30dp"
+            android:drawableTint="@color/white"
+            android:ellipsize="start"
+            android:foregroundTint="@color/white"
+            android:freezesText="false"
+            android:hint="EMAIL"
+            android:inputType="textEmailAddress"
+            android:padding="20dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/feildtextcolor"
+            android:textColorHint="@color/feildhint"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/username"
+            style="@android:style/Widget.Holo.Light.EditText"
+            android:layout_width="315dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="5dp"
+            android:autofillHints=""
+            android:background="@drawable/feildbackground"
+            android:bufferType="editable"
+            android:drawableEnd="@drawable/phn"
+            android:drawablePadding="30dp"
+            android:drawableTint="@color/white"
+            android:ellipsize="start"
+            android:foregroundTint="@color/white"
+            android:freezesText="false"
+            android:hint="PHONENUMBER"
+            android:inputType="number"
+            android:padding="20dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/feildtextcolor"
+            android:textColorHint="@color/feildhint"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/usernamelogin"
+            style="@android:style/Widget.Holo.Light.EditText"
+            android:layout_width="315dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/feildbackground"
+            android:bufferType="editable"
+            android:drawableEnd="@drawable/password"
+            android:drawablePadding="30dp"
+            android:drawableTint="@color/white"
+            android:ellipsize="start"
+            android:foregroundTint="@color/white"
+            android:freezesText="false"
+            android:hint="PASSWORD"
+            android:importantForAutofill="no"
+            android:inputType="textPassword"
+            android:padding="20dp"
+            android:textAlignment="viewStart"
+            android:textColor="@color/feildtextcolor"
+            android:textColorHint="@color/feildhint"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="386dp"
+            android:layout_height="46dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="136dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:text="Already Registered "
+                android:textColor="@color/lighttext2"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/anon"
+                android:layout_width="125dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bcktofirstbtn"
+                android:text="LOGIN HERE"
+                android:textColor="@color/smallbtntextcolor"
+                tools:ignore="TouchTargetSizeCheck" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/fregister"
+        android:layout_width="172dp"
+        android:layout_height="166dp"
+        android:background="@drawable/tributton"
+        android:text="REGISTER"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.886" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

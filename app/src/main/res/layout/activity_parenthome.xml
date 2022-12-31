@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color2_parent"
+    tools:context=".parenthome"
+    tools:layout_editor_absoluteY="25dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/child_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rippleeffect"
+        app:cardBackgroundColor="@color/primary_parent"
+        app:contentPadding="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout7"
+        tools:ignore="UnknownId">
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="CHILD MODE"
+            android:textAlignment="center"
+            android:textColor="@color/bigbtntxtcolor"
+            android:textSize="34sp" />
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/maincolor"
+        android:orientation="vertical"
+        android:padding="40px"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="40dp">
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:text="Added Users"
+                android:textColor="@color/black"
+                android:textSize="34sp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@color/bigbtnborder"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/childname1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bottommenubg"
+                android:backgroundTint="@color/lighttext"
+                android:paddingLeft="10dp"
+                android:paddingTop="24dp"
+                android:text="Child Name : "
+                android:textAlignment="center"
+                android:textColor="@color/lighttext2"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/childbtn1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottommenubg"
+                android:padding="10dp"
+                android:text="See Activity"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@color/bigbtnborder"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/childname2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bottommenubg"
+                android:backgroundTint="@color/lighttext"
+                android:paddingLeft="10dp"
+                android:paddingTop="24dp"
+                android:text="Child Name : "
+                android:textAlignment="center"
+                android:textColor="@color/lighttext2"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/childbtn2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottommenubg"
+                android:padding="10dp"
+                android:text="See Activity"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:background="@color/bigbtnborder"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/childname3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/bottommenubg"
+                android:backgroundTint="@color/lighttext"
+                android:paddingLeft="10dp"
+                android:paddingTop="24dp"
+                android:text="Child Name : "
+                android:textAlignment="center"
+                android:textColor="@color/lighttext2"
+                android:textSize="24sp" />
+
+            <Button
+                android:id="@+id/childbtn3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bottommenubg"
+                android:padding="10dp"
+                android:text="See Activity"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/callbox"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/blackphone"
+            app:cardBackgroundColor="@color/btnbackgrouncolor"
+            app:cardCornerRadius="15dp"
+            app:contentPadding="20dp">
+
+            <TextView
+                android:id="@+id/calltext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="CALL"
+                android:textAlignment="center"
+                android:textColor="@color/bigbtntxtcolor"
+                android:textSize="34sp" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/alertbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/black"
+            app:cardCornerRadius="15dp"
+            app:contentPadding="20dp">
+
+            <TextView
+                android:id="@+id/alerttext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="All Safe"
+                android:textAlignment="center"
+                android:textColor="@color/bigbtntxtcolor"
+                android:textSize="34sp" />
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/parent_logout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="90dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/rippleeffect"
+        app:cardBackgroundColor="@color/color1_parent"
+        app:contentPadding="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/child_mode"
+        app:layout_constraintVertical_bias="0.134"
+        tools:ignore="UnknownId">
+
+        <TextView
+            android:id="@+id/jkwdw"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:text="LOGOUT"
+            android:textAlignment="center"
+            android:textColor="@color/bigbtntxtcolor"
+            android:textSize="34sp" />
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

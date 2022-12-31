@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    tools:context=".settings"
+    tools:layout_editor_absoluteY="25dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44">
+
+        <LinearLayout
+            android:id="@+id/linearLayout5"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="9dp"
+            android:background="@color/bigbtnbgcolor"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bigbtnborder"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/AWAREMODE"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bcktofirstbtn"
+                    android:backgroundTint="@color/feildbackground"
+                    android:drawableLeft="@drawable/ic_baseline_settings_24"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:padding="20dp"
+                    android:text="SETTINGS"
+                    android:textAlignment="center"
+                    android:textColor="@color/lighttext"
+                    android:textSize="34sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/profile_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/rippleeffect"
+                    android:backgroundTint="@color/btnbackgrouncolor"
+                    android:drawableLeft="@drawable/profile_settings"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingLeft="10dp"
+                    android:text="Profiile"
+                    android:textColor="@color/lighttext"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/parent_mode"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/rippleeffect"
+                    android:backgroundTint="@color/btnbackgrouncolor"
+                    android:backgroundTintMode="src_in"
+                    android:drawableLeft="@drawable/icons8_guardian_64"
+                    android:fontFamily="sans-serif-black"
+                    android:text="GUARDIAN MODE"
+                    android:textColor="@color/lighttext"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/addbodygaurd"
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@drawable/rippleeffect"
+                    android:backgroundTint="@color/btnbackgrouncolor"
+                    android:drawableLeft="@drawable/icons8_add_user_male_50"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingLeft="10dp"
+                    android:shadowColor="#EC0000"
+                    android:text="ADD  GUARDIAN"
+                    android:textColor="@color/lighttext"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/logout_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/feildbackground"
+                    android:backgroundTint="@color/red"
+                    android:drawableLeft="@drawable/icons8_logout_48"
+                    android:fontFamily="sans-serif-black"
+                    android:paddingLeft="25dp"
+                    android:paddingRight="59dp"
+                    android:text="LOGOUT"
+                    android:textAlignment="center"
+                    android:textColor="@color/bigbtntxtcolor"
+                    android:textSize="20sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

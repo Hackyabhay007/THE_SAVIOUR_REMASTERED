@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/backgroundcolor"
+    android:theme="@style/CardView.Dark">
+
+    <LinearLayout
+        android:layout_width="411dp"
+        android:layout_height="89dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="410dp"
+            android:layout_height="80dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="76dp"
+                android:layout_height="wrap_content"
+                android:background="#00FDD835"
+                android:contentDescription="TODO"
+                android:foregroundTint="#FF0000"
+                app:srcCompat="@drawable/registerhead" />
+
+            <LinearLayout
+                android:layout_width="265dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bname1"
+                    android:layout_width="142dp"
+                    android:layout_height="wrap_content"
+                    android:text="hy"
+                    android:textColor="#FF4F0A" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="149dp"
+                    android:layout_height="32dp"
+                    android:background="#00F3EFEF"
+                    android:text="hy2"
+                    android:textAlignment="gravity"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                    android:textColor="#FFFFFF"
+                    android:textDirection="firstStrong"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/CALLNOW"
+                android:layout_width="44dp"
+                android:layout_height="47dp"
+                android:layout_margin="10dp"
+                android:rotationX="-190"
+                app:srcCompat="@android:drawable/ic_menu_call" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="match_parent"
+            android:layout_height="14dp"
+            android:layout_marginBottom="16dp"
+            app:srcCompat="@drawable/buttonbg" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
