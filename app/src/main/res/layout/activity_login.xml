@@ -8,54 +8,45 @@
     android:layoutDirection="ltr"
     tools:context=".login">
 
-    <Button
-        android:id="@+id/login_btn"
-        android:layout_width="208dp"
-        android:layout_height="201dp"
-        android:layout_marginBottom="120dp"
-        android:background="@drawable/tributton"
-        android:text="LOGIN"
-        android:textColor="@color/bigbtntxtcolor"
-        android:textSize="24sp"
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="345dp"
-        android:layout_height="92dp"
-        android:layout_marginTop="80dp"
-        android:fontFamily="sans-serif-black"
-        android:paddingStart="45dp"
-        android:paddingTop="26dp"
-        android:paddingRight="95dp"
-        android:text="@string/login"
-        android:textAlignment="center"
-        android:textColor="@color/hardtext"
-        android:textSize="34sp"
-        app:drawableStartCompat="@drawable/logologin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:layout_width="327dp"
-        android:layout_height="259dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/login_btn"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.51">
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="345dp"
+            android:layout_height="92dp"
+            android:layout_marginTop="80dp"
+            android:fontFamily="sans-serif-black"
+            android:paddingStart="45dp"
+            android:paddingTop="26dp"
+            android:paddingRight="95dp"
+            android:text="@string/login"
+            android:textAlignment="center"
+            android:textColor="@color/hardtext"
+            android:textSize="34sp"
+            app:drawableStartCompat="@drawable/logologin" />
 
         <EditText
             android:id="@+id/usernamelogin"
             style="@android:style/Widget.Holo.Light.EditText"
             android:layout_width="315dp"
             android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:background="@drawable/feildbackground"
             android:bufferType="editable"
@@ -78,6 +69,7 @@
             android:id="@+id/password"
             android:layout_width="315dp"
             android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:background="@drawable/feildbackground"
             android:drawableRight="@drawable/password"
@@ -94,7 +86,8 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="15dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
             android:orientation="horizontal">
 
             <TextView
@@ -118,6 +111,17 @@
                 android:text="REGISTER HERE"
                 android:textColor="@color/smallbtntextcolor" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="208dp"
+            android:layout_height="201dp"
+            android:layout_gravity="center"
+            android:layout_marginBottom="120dp"
+            android:background="@drawable/tributton"
+            android:text="LOGIN"
+            android:textColor="@color/bigbtntxtcolor"
+            android:textSize="24sp" />
 
     </LinearLayout>
 

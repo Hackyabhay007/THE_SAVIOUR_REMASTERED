@@ -45,7 +45,7 @@ public class ParentMode extends AppCompatActivity {
 //checks parent is logged in or not
           if (child1userid.length()>9)
           {
-              Toast.makeText(this, child1userid, Toast.LENGTH_SHORT).show();
+              //Toast.makeText(this, child1userid, Toast.LENGTH_SHORT).show();
               Intent intent = new Intent(ParentMode.this, parenthome.class);
               startActivity(intent);
           }
@@ -66,7 +66,6 @@ public class ParentMode extends AppCompatActivity {
             }
         });
     }
-
 
     //it checks the userid exists if exists then add all userid data in shared db
     void ChildDetailsFetcher(String childuserid)

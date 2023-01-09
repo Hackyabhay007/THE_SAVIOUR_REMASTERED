@@ -41,7 +41,7 @@
                 android:layout_weight="1"
                 android:fontFamily="sans-serif-condensed-medium"
                 android:paddingRight="16dp"
-                android:text="GUARDIAN MODE"
+                android:text="BODYGUARD  MODE"
                 android:textColor="@color/feildtextcolor"
                 android:textSize="34sp" />
         </LinearLayout>
@@ -77,7 +77,7 @@
                 android:elegantTextHeight="false"
                 android:ems="10"
                 android:gravity="center"
-                android:hint="GUARDIAN CODE"
+                android:hint="BODYGUARD CODE"
                 android:inputType="textPersonName"
                 android:padding="30dp"
                 android:textColor="@color/feildhint"
@@ -131,7 +131,7 @@
                     android:background="@drawable/bcktofirstbtn"
                     android:fontFamily="sans-serif-light"
                     android:padding="20dp"
-                    android:text="Add Child By Entering Unique Id Avaliable in Profile Section Of Your Child"
+                    android:text="Add User By Entering Unique Id Avaliable in Profile Section Of Your Child"
                     android:textAlignment="center"
                     android:textColor="@color/lighttext2"
                     android:textSize="24sp" />

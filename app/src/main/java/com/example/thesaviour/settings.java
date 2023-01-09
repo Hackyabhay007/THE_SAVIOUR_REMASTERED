@@ -39,10 +39,10 @@ public class settings extends Fragment {
             @Override
             public void onClick(View view) {
                 Toast.makeText(getActivity(), "LOGOUT SUCCESSFUL", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getContext(),login.class));
+                startActivity(new Intent(getContext(),firsttime.class));
                 SharedPreferences preferences = getActivity().getSharedPreferences("Thesaviour", 0);
                 SharedPreferences.Editor editor = preferences.edit();
-                Toast.makeText(getContext(), "USERS BODYGAURD CLEARED", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "USER DATA CLEARED", Toast.LENGTH_SHORT).show();
                 editor.clear();
                 editor.apply();
                 FirebaseAuth.getInstance().signOut();

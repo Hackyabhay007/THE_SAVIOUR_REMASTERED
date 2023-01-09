@@ -51,8 +51,7 @@ public class MessageRecieveBroadcaster extends BroadcastReceiver {
             SmsMessage  message=  SmsMessage.createFromPdu((byte[]) obj );
           String mssg = message.getMessageBody();
             Log.d("Message"," Not Safe Message Received  Initiating Alerts ");
-
-            if (mssg.contains(child1userid)) {
+            if (mssg.contains(child1userid) &&mssg.length()>35)  {
                 Toast.makeText(context, Parentchild1_Name + " Is in danger Open Saviour App to see where he IS ", Toast.LENGTH_SHORT).show();
                 prefeditor.putString("alertforparentactivity",alertcodeforparenthome );
                 prefeditor.apply();
@@ -68,7 +67,22 @@ public class MessageRecieveBroadcaster extends BroadcastReceiver {
                 mp.start();
                 NotificationForParentMode(context);
             }
-                //end of notification
+
+            if (mssg.contains(child1userid) &&mssg.length()<40)  {
+                Toast.makeText(context, Parentchild1_Name + " Is in danger Open Saviour App to see where he IS ", Toast.LENGTH_SHORT).show();
+                MediaPlayer mp = null;// Here
+                mp = MediaPlayer.create(context, R.raw.highalarm);
+                //Onreceive gives you context
+                // Get the AudioManager
+                //it sets the volume to max
+                AudioManager audioManager = (AudioManager) context.getSystemService(Context.AUDIO_SERVICE);
+                // Set the volume of played media to maximum.
+                audioManager.setStreamVolume(AudioManager.STREAM_MUSIC,audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC),0);
+                //it starts the alarm system
+                mp.start();
+                NotificationForUserMode(context);
+            }
+
         }
     }
 
@@ -92,6 +106,32 @@ public class MessageRecieveBroadcaster extends BroadcastReceiver {
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
             int importance = NotificationManager.IMPORTANCE_HIGH;
             NotificationChannel channel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "Parent Channel", importance);
+            NotificationManager notificationManager = context.getSystemService(NotificationManager.class);
+            notificationManager.createNotificationChannel(channel);
+        }
+        // Display the notification
+        NotificationManager notificationManager = (NotificationManager) context.getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.notify(NOTIFICATION_ID, builder.build());
+    }
+
+    void NotificationForUserMode(Context context)
+    {
+
+
+        final String NOTIFICATION_CHANNEL_ID = "PARENT_NOTIFICATION_CHANNEL";
+        final int NOTIFICATION_ID = 124;
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, NOTIFICATION_CHANNEL_ID)
+                .setSmallIcon(R.drawable.gaurd1)
+                .setContentTitle("The Saviour Alert")
+                .setContentText( "Ringing.....")
+                .setLights(0xff00ff00, 300, 100)
+                .setColor(ContextCompat.getColor(context, R.color.red))
+                .setColorized(true).setColor(Color.RED)
+                .setPriority(NotificationCompat.PRIORITY_HIGH);
+        // Create the notification channel (for devices running Android 26 or higher)
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.O) {
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel channel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, "User Channel", importance);
             NotificationManager notificationManager = context.getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
         }

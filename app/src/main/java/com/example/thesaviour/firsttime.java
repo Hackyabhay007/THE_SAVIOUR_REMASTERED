@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -19,11 +20,8 @@ Button parentmode;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_firsttime);
 
-        //must methods
-        ActiveLoginCheck();
-
         login =findViewById(R.id.LOGIN);
-        register =findViewById(R.id.Parentmode);
+        register =findViewById(R.id.register);
         parentmode = findViewById(R.id.Parentmode);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,17 +49,5 @@ Button parentmode;
         });
     }
 
-    //it checks whether user is logged in or not
-    void ActiveLoginCheck()
-    {
-        FirebaseAuth mAuth;
-        mAuth = FirebaseAuth.getInstance();
 
-        FirebaseUser currentUser = mAuth.getCurrentUser();
-        if(currentUser != null){
-            Intent intent = new Intent(firsttime.this, homie.class);
-            startActivity(intent);
-        }
-
-    }
 }

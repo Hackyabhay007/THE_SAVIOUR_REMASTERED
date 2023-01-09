@@ -7,35 +7,42 @@
     android:background="@color/backgroundcolor"
     tools:context=".userregister">
 
-    <TextView
-        android:id="@+id/textView42"
-        android:layout_width="377dp"
-        android:layout_height="98dp"
-        android:layout_marginTop="40dp"
-        android:fontFamily="sans-serif-black"
-        android:paddingStart="40dp"
-        android:paddingTop="40dp"
-        android:paddingEnd="79dp"
-        android:text="REGISTER"
-        android:textAlignment="center"
-        android:textColor="@color/hardtext"
-        android:textSize="34sp"
-        app:drawableStartCompat="@drawable/registerhead"
+    <ScrollView
+        android:id="@+id/scrollView3"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="316dp"
-        android:layout_height="417dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/scrollView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView42">
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView42"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-black"
+            android:paddingStart="40dp"
+            android:paddingTop="40dp"
+            android:paddingEnd="79dp"
+            android:text="REGISTER"
+            android:textAlignment="center"
+            android:textColor="@color/hardtext"
+            android:textSize="34sp"
+            app:drawableStartCompat="@drawable/registerhead" />
 
         <EditText
             android:id="@+id/fullname"
@@ -131,7 +138,7 @@
             android:textSize="14sp" />
 
         <LinearLayout
-            android:layout_width="386dp"
+            android:layout_width="match_parent"
             android:layout_height="46dp"
             android:orientation="horizontal">
 
@@ -155,22 +162,19 @@
                 android:text="LOGIN HERE"
                 android:textColor="@color/smallbtntextcolor"
                 tools:ignore="TouchTargetSizeCheck" />
+
         </LinearLayout>
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/fregister"
+            android:layout_width="172dp"
+            android:layout_height="166dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/tributton"
+            android:text="REGISTER"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp" />
 
-    <Button
-        android:id="@+id/fregister"
-        android:layout_width="172dp"
-        android:layout_height="166dp"
-        android:background="@drawable/tributton"
-        android:text="REGISTER"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.886" />
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

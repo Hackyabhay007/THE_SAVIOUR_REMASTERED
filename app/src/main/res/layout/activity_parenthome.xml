@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color2_parent"
+    android:background="@color/primary_parent"
     tools:context=".parenthome"
     tools:layout_editor_absoluteY="25dp">
 
@@ -28,7 +28,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
-            android:text="CHILD MODE"
+            android:text="USER MODE"
             android:textAlignment="center"
             android:textColor="@color/bigbtntxtcolor"
             android:textSize="34sp" />
@@ -58,13 +58,13 @@
                 android:padding="15dp"
                 android:text="Added Users"
                 android:textColor="@color/black"
-                android:textSize="34sp"
+                android:textSize="24sp"
                 android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_height="90dp"
             android:layout_marginTop="40dp"
             android:background="@color/bigbtnborder"
             android:orientation="horizontal"
@@ -74,12 +74,11 @@
                 android:id="@+id/childname1"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginEnd="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/bottommenubg"
                 android:backgroundTint="@color/lighttext"
                 android:paddingLeft="10dp"
-                android:paddingTop="24dp"
+                android:paddingTop="20dp"
                 android:text="Child Name : "
                 android:textAlignment="center"
                 android:textColor="@color/lighttext2"
@@ -174,7 +173,7 @@
             android:background="@drawable/blackphone"
             app:cardBackgroundColor="@color/btnbackgrouncolor"
             app:cardCornerRadius="15dp"
-            app:contentPadding="20dp">
+            app:contentPadding="10dp">
 
             <TextView
                 android:id="@+id/calltext"
@@ -184,7 +183,30 @@
                 android:text="CALL"
                 android:textAlignment="center"
                 android:textColor="@color/bigbtntxtcolor"
-                android:textSize="34sp" />
+                android:textSize="24sp"
+                app:drawableLeftCompat="@android:drawable/stat_sys_phone_call" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/RingPhone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/blackphone"
+            app:cardBackgroundColor="@color/red"
+            app:cardCornerRadius="15dp"
+            app:contentPadding="10dp">
+
+            <TextView
+                android:id="@+id/RingPhone1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-medium"
+                android:text="RING PHONE"
+                android:textAlignment="center"
+                android:textColor="@color/bigbtntxtcolor"
+                android:textSize="24sp"
+                app:drawableLeftCompat="@android:drawable/stat_sys_warning" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -192,6 +214,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:visibility="gone"
             app:cardBackgroundColor="@color/black"
             app:cardCornerRadius="15dp"
             app:contentPadding="20dp">
@@ -204,37 +227,38 @@
                 android:text="All Safe"
                 android:textAlignment="center"
                 android:textColor="@color/bigbtntxtcolor"
-                android:textSize="34sp" />
+                android:textSize="24sp" />
         </androidx.cardview.widget.CardView>
 
     </LinearLayout>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/parent_logout"
-        android:layout_width="match_parent"
+        android:layout_width="196dp"
         android:layout_height="wrap_content"
         android:layout_margin="90dp"
         android:layout_marginTop="48dp"
         android:background="@drawable/rippleeffect"
         app:cardBackgroundColor="@color/color1_parent"
-        app:contentPadding="15dp"
+        app:cardCornerRadius="900dp"
+        app:contentPadding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/child_mode"
-        app:layout_constraintVertical_bias="0.134"
+        app:layout_constraintVertical_bias="0.95"
         tools:ignore="UnknownId">
 
         <TextView
             android:id="@+id/jkwdw"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-medium"
+            android:fontFamily="sans-serif-condensed-medium"
             android:text="LOGOUT"
             android:textAlignment="center"
             android:textColor="@color/bigbtntxtcolor"
-            android:textSize="34sp" />
+            android:textSize="24sp" />
     </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

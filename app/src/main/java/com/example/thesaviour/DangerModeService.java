@@ -204,7 +204,9 @@ public class DangerModeService extends Service implements connectionchecker.Rece
 
             Intent intent = new Intent(Intent.ACTION_CALL);
             intent.setData(Uri.parse("tel:+91" + primaryphnno));
-            //startActivity(intent);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.addFlags(Intent.FLAG_FROM_BACKGROUND);
+            startActivity(intent);
         }
     }
 
@@ -221,6 +223,7 @@ public class DangerModeService extends Service implements connectionchecker.Rece
 //            ActivityCompat.requestPermissions((Activity) getBaseContext(),
 //                    new String[]{Manifest.permission.SEND_SMS},
 //                    MY_PERMISSIONS_REQUEST_SEND_SMS);
+            Toast.makeText(mContext, "Give Sms Permissions From Settings", Toast.LENGTH_SHORT).show();
         } else {
             // Set the destination phone number to the string in editText.
             String destinationAddress1 = primaryphnno;

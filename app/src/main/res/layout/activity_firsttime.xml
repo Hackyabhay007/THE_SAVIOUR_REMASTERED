@@ -60,7 +60,7 @@
                 android:textSize="34sp" />
 
             <Button
-                android:id="@+id/LOGIN2"
+                android:id="@+id/register"
                 android:layout_width="340dp"
                 android:layout_height="103dp"
                 android:background="@color/btnbackgrouncolor"

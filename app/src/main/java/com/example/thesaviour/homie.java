@@ -11,6 +11,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.thesaviour.safehome;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -42,8 +43,8 @@ public class homie extends AppCompatActivity {
     LocationRequest locationRequest = new LocationRequest();
     LocationCallback locationCallback;
 
+    BottomNavigationView bottomNavigationView;
     int count = 0;
-
 
     public boolean onKeyDown(int keyCode, KeyEvent event) {
         if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN || keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
@@ -60,20 +61,15 @@ public class homie extends AppCompatActivity {
         return true;
     }
 
-    BottomNavigationView bottomNavigationView;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homie);
-
-        //must method
-        //ActiveLoginCheck();
-
         String [] permission ={Manifest.permission.RECEIVE_SMS};
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             requestPermissions(permission,239);
         }
+
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 //creating objects of fragments
@@ -113,21 +109,6 @@ public class homie extends AppCompatActivity {
     }
 
 
-   void updategps(FusedLocationProviderClient fusedLocationProviderClient){
-
-    }
-
-    void locationsender(Location location)
-    {
-        if(location.hasAltitude())
-        {
-            Toast.makeText(homie.this,"logitude ="+ String.valueOf(location.getLongitude()), Toast.LENGTH_SHORT).show();
-            Toast.makeText(homie.this,"latitiude ="+ String.valueOf(location.getLatitude()), Toast.LENGTH_SHORT).show();
-        }
-        else {
-            Toast.makeText(homie.this, "Altitides not Found", Toast.LENGTH_SHORT).show();
-        }
-    }
 
 
     // method to add fragment or replace fragnment

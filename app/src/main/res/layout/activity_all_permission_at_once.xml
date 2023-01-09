@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundcolor"
+    tools:context=".AllPermissionAtOnce">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-black"
+                android:text="Allow Permissions"
+                android:textAlignment="center"
+                android:textColor="@color/bigbtntxtcolor"
+                android:textSize="24sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bcktofirstbtn"
+                android:backgroundTint="@color/color1_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:paddingTop="20dp"
+                    android:text="MICROPHONE"
+                    android:textColor="@color/bigbtntxtcolor"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/microphonebtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/bigbtnborder"
+                    android:padding="15dp"
+                    android:text="Allow"
+                    android:textColor="@color/bigbtntxtcolor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bcktofirstbtn"
+                android:backgroundTint="@color/color1_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView11987"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:paddingTop="20dp"
+                    android:text="LOCATION"
+                    android:textColor="@color/bigbtntxtcolor"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/locbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/bigbtnborder"
+                    android:padding="15dp"
+                    android:text="Allow"
+                    android:textColor="@color/bigbtntxtcolor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bcktofirstbtn"
+                android:backgroundTint="@color/color1_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView113434"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:paddingTop="20dp"
+                    android:text="SMS"
+                    android:textColor="@color/bigbtntxtcolor"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/smsbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/bigbtnborder"
+                    android:padding="15dp"
+                    android:text="Allow"
+                    android:textColor="@color/bigbtntxtcolor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bcktofirstbtn"
+                android:backgroundTint="@color/color1_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView114"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:paddingTop="20dp"
+                    android:text="CALL"
+                    android:textColor="@color/bigbtntxtcolor"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/callbtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/bigbtnborder"
+                    android:padding="15dp"
+                    android:text="Allow"
+                    android:textColor="@color/bigbtntxtcolor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bcktofirstbtn"
+                android:backgroundTint="@color/color1_parent"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/textView111"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:paddingTop="20dp"
+                    android:text="CAMERA"
+                    android:textColor="@color/bigbtntxtcolor"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:id="@+id/camerabtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/bigbtnborder"
+                    android:padding="15dp"
+                    android:text="Allow"
+                    android:textColor="@color/bigbtntxtcolor" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bcktofirstbtn"
+                android:padding="20dp"
+                android:text="Please Allow All The Permsiions To Run the App Smoothly "
+                android:textColor="@color/bigbtntxtcolor"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/ProceedBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:background="@drawable/bcktofirstbtn"
+                android:backgroundTint="@color/btnbackgrouncolor"
+                android:fontFamily="sans-serif-black"
+                android:text="PROCEED"
+                android:textColor="@color/bigbtntxtcolor"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

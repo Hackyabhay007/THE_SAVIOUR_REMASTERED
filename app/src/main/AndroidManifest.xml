@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- Recommended for Android 9 (API level 28) and lower. -->
     <!-- Required for Android 10 (API level 29) and higher. -->
-    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
@@ -14,6 +13,9 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <application
         android:allowBackup="true"
@@ -23,8 +25,24 @@
         android:supportsRtl="true"
         android:theme="@style/DemoTheme"
         tools:targetApi="31">
+        <activity
+            android:name=".Parent_Activity"
+            android:exported="true">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
 
-        <receiver android:name=".BackgroundListenerforDangermode"
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="YOUR_API_KEY" />
+
+        <activity
+            android:name=".AllPermissionAtOnce"
+            android:exported="true" />
+
+        <receiver
+            android:name=".BackgroundListenerforDangermode"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.media.VOLUME_CHANGED_ACTION" />
@@ -42,18 +60,10 @@
 
         <activity
             android:name=".ParentMode"
-            android:exported="true">
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".parenthome"
-            android:exported="true">
-
-        </activity>
-        <activity
-            android:name=".ParentAlert"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
 
         <service
             android:name=".DangerModeService"
@@ -71,34 +81,22 @@
         </activity>
         <activity
             android:name=".bodygaurdactivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".firsttime"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".login"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".userregister"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".UserProfile"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".homie"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
 
         <receiver
             android:name=".MessageRecieveBroadcaster"
