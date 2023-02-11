@@ -5,39 +5,46 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundcolor"
-    tools:context=".homie">
+    tools:context="com.hackydesk.thesaviour.homie">
     <!-- res/layout/example_activity.xml -->
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragment_container_view"
-        android:layout_width="404dp"
-        android:layout_height="769dp"
-        android:layout_marginTop="4dp"
-        android:background="@color/backgroundcolor"
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragment_container_view"
+            android:layout_width="match_parent"
+            android:layout_height="773dp"
+            android:layout_above="@+id/bottom_navigation"
+            android:background="@color/backgroundcolor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_navigation"
-            android:layout_width="409dp"
-            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="2dp"
             android:background="@drawable/bottommenubg"
-            android:elevation="18dp"
-            app:itemActiveIndicatorStyle="@animator/nav_default_pop_enter_anim"
+            android:clipToPadding="false"
+            android:elevation="10dp"
+            android:focusable="auto"
+            app:itemActiveIndicatorStyle="@style/DemoTheme"
             app:itemHorizontalTranslationEnabled="true"
-            app:itemIconSize="35dp"
+            app:itemIconSize="@dimen/_25sdp"
             app:itemIconTint="@color/mainmenuiconcolor"
             app:itemRippleColor="@color/mainmenutextcolor"
             app:itemTextColor="@color/lighttext"
             app:labelVisibilityMode="selected"
             app:menu="@menu/item_menu" />
+
     </RelativeLayout>
 
 

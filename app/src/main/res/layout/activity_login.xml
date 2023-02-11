@@ -4,125 +4,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundcolor"
+    android:background="@drawable/wave_haikei"
     android:layoutDirection="ltr"
-    tools:context=".login">
+    tools:context="com.hackydesk.thesaviour.login">
 
     <ScrollView
         android:id="@+id/scrollView4"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <LinearLayout
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="@+id/scrollView4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="345dp"
-            android:layout_height="92dp"
-            android:layout_marginTop="80dp"
-            android:fontFamily="sans-serif-black"
-            android:paddingStart="45dp"
-            android:paddingTop="26dp"
-            android:paddingRight="95dp"
-            android:text="@string/login"
-            android:textAlignment="center"
-            android:textColor="@color/hardtext"
-            android:textSize="34sp"
-            app:drawableStartCompat="@drawable/logologin" />
-
-        <EditText
-            android:id="@+id/usernamelogin"
-            style="@android:style/Widget.Holo.Light.EditText"
-            android:layout_width="315dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/feildbackground"
-            android:bufferType="editable"
-            android:drawableEnd="@drawable/user1"
-            android:drawablePadding="30dp"
-            android:drawableTint="@color/white"
-            android:ellipsize="start"
-            android:foregroundTint="@color/white"
-            android:freezesText="false"
-            android:hint="EMAIL"
-            android:inputType="textWebEmailAddress"
-            android:padding="20dp"
-            android:textAlignment="viewStart"
-            android:textColor="@color/feildtextcolor"
-            android:textColorHint="@color/feildhint"
-            android:textSize="14sp" />
-
-
-        <EditText
-            android:id="@+id/password"
-            android:layout_width="315dp"
-            android:layout_height="80dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="20dp"
-            android:background="@drawable/feildbackground"
-            android:drawableRight="@drawable/password"
-            android:ems="10"
-            android:hint="PASSWORD"
-            android:inputType="textPassword"
-            android:padding="20dp"
-            android:paddingRight="10dp"
-            android:textAlignment="viewStart"
-            android:textColor="@color/feildhint"
-            android:textColorHint="@color/feildhint"
-            android:textSize="14sp" />
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_gravity="center_horizontal"
-            android:layout_margin="20dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView7"
-                android:layout_width="136dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
-                android:text="Didn't Register "
-                android:textColor="@color/lighttext2"
-                android:textSize="16sp" />
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="92dp"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:paddingStart="45dp"
+                android:paddingTop="@dimen/_6sdp"
+                android:paddingRight="95dp"
+                android:text="@string/login"
+                android:textAlignment="center"
+                android:textColor="@color/hardtext"
+                android:textSize="34sp"
+                app:drawableStartCompat="@drawable/logologin" />
+
+            <EditText
+                android:id="@+id/usernamelogin"
+                style="@android:style/Widget.Holo.Light.EditText"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/feildbackground"
+                android:bufferType="editable"
+                android:drawableEnd="@drawable/user1"
+                android:drawablePadding="30dp"
+                android:drawableTint="@color/white"
+                android:ellipsize="start"
+                android:foregroundTint="@color/white"
+                android:freezesText="false"
+                android:hint="EMAIL"
+                android:inputType="textWebEmailAddress"
+                android:padding="20dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/feildtextcolor"
+                android:textColorHint="@color/feildhint"
+                android:textSize="14sp"
+                tools:ignore="RtlCompat" />
+
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/feildbackground"
+                android:drawableRight="@drawable/password"
+                android:ems="10"
+                android:hint="PASSWORD"
+                android:inputType="textPassword"
+                android:padding="20dp"
+                android:paddingRight="10dp"
+                android:textAlignment="viewStart"
+                android:textColor="@color/feildhint"
+                android:textColorHint="@color/feildhint"
+                android:textSize="14sp"
+                tools:ignore="RtlCompat" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/textView7"
+                        android:layout_width="136dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="10dp"
+                        android:text="Didn't Register "
+                        android:textColor="@color/lighttext2"
+                        android:textSize="16sp" />
+
+                    <Button
+                        android:id="@+id/rtrnbacktomain2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/bcktofirstbtn"
+                        android:text="REGISTER HERE"
+                        android:textColor="@color/smallbtntextcolor"
+                        tools:ignore="TouchTargetSizeCheck" />
+                </LinearLayout>
+
+            </LinearLayout>
 
             <Button
-                android:id="@+id/rtrnbacktomain2"
-                android:layout_width="125dp"
-                android:layout_height="27dp"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/bcktofirstbtn"
-                android:text="REGISTER HERE"
-                android:textColor="@color/smallbtntextcolor" />
+                android:id="@+id/login_btn"
+                android:layout_width="@dimen/_150sdp"
+                android:layout_height="@dimen/_160sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/tributton"
+                android:text="LOGIN"
+                android:textColor="@color/bigbtntxtcolor"
+                android:textSize="24sp" />
+
         </LinearLayout>
-
-        <Button
-            android:id="@+id/login_btn"
-            android:layout_width="208dp"
-            android:layout_height="201dp"
-            android:layout_gravity="center"
-            android:layout_marginBottom="120dp"
-            android:background="@drawable/tributton"
-            android:text="LOGIN"
-            android:textColor="@color/bigbtntxtcolor"
-            android:textSize="24sp" />
-
-    </LinearLayout>
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

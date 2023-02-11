@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundcolor"
-    tools:context=".AllPermissionAtOnce">
+    android:background="@drawable/first_time_bg"
+    tools:context="com.hackydesk.thesaviour.AllPermissionAtOnce">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -33,11 +33,14 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/bcktofirstbtn"
                 android:backgroundTint="@color/color1_parent"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="8dp"
+                android:visibility="gone"
+                tools:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView11"
@@ -64,11 +67,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/bcktofirstbtn"
-                android:backgroundTint="@color/color1_parent"
+                android:backgroundTint="@color/red"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="8dp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView11987"
@@ -88,18 +93,20 @@
                     android:backgroundTint="@color/bigbtnborder"
                     android:padding="15dp"
                     android:text="Allow"
-                    android:textColor="@color/bigbtntxtcolor" />
+                    android:textColor="@color/black" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/bcktofirstbtn"
-                android:backgroundTint="@color/color1_parent"
+                android:backgroundTint="@color/red"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="8dp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView113434"
@@ -119,18 +126,20 @@
                     android:backgroundTint="@color/bigbtnborder"
                     android:padding="15dp"
                     android:text="Allow"
-                    android:textColor="@color/bigbtntxtcolor" />
+                    android:textColor="@color/black" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/bcktofirstbtn"
-                android:backgroundTint="@color/color1_parent"
+                android:backgroundTint="@color/red"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="8dp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView114"
@@ -150,18 +159,20 @@
                     android:backgroundTint="@color/bigbtnborder"
                     android:padding="15dp"
                     android:text="Allow"
-                    android:textColor="@color/bigbtntxtcolor" />
+                    android:textColor="@color/black" />
 
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/bcktofirstbtn"
                 android:backgroundTint="@color/color1_parent"
                 android:orientation="horizontal"
-                android:padding="10dp">
+                android:padding="8dp"
+                android:visibility="gone">
 
                 <TextView
                     android:id="@+id/textView111"
@@ -186,13 +197,13 @@
             </LinearLayout>
 
             <TextView
-                android:id="@+id/textView18"
+                android:id="@+id/permissioninfo"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_margin="10dp"
                 android:background="@drawable/bcktofirstbtn"
                 android:padding="20dp"
-                android:text="Please Allow All The Permsiions To Run the App Smoothly "
+                android:text="Please Allow All The Permsiions To Run the App Smoothly .Location Permission Is Used to Sent Current Location To Guardian,SMS permission is used to sent secret code to parent ,Call permisiion Is used to Call Emergency Numbers"
                 android:textColor="@color/bigbtntxtcolor"
                 android:textSize="16sp" />
 
@@ -202,10 +213,10 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="40dp"
                 android:background="@drawable/bcktofirstbtn"
-                android:backgroundTint="@color/btnbackgrouncolor"
+                android:backgroundTint="@color/white"
                 android:fontFamily="sans-serif-black"
                 android:text="PROCEED"
-                android:textColor="@color/bigbtntxtcolor"
+                android:textColor="@color/black"
                 android:textSize="20sp" />
 
         </LinearLayout>

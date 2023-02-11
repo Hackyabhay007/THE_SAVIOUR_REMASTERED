@@ -4,140 +4,197 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/color2_parent"
+    android:background="@drawable/first_time_bg"
     android:paddingTop="10px"
-    tools:context=".ParentMode">
+    tools:context="com.hackydesk.thesaviour.ParentMode">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:alpha="3"
-        app:cardBackgroundColor="#360FA3"
-        app:cardElevation="10dp"
-        app:contentPadding="@dimen/fab_margin"
+    <ScrollView
+        android:id="@+id/scrollviewPrent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/linearLayout8"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <ImageView
-                android:id="@+id/imageView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/icons8_guardian_64" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_weight="1"
-                android:fontFamily="sans-serif-condensed-medium"
-                android:paddingRight="16dp"
-                android:text="BODYGUARD  MODE"
-                android:textColor="@color/feildtextcolor"
-                android:textSize="34sp" />
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cardView2"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="30dp"
-        app:cardBackgroundColor="@color/secondary_parent"
-        app:cardCornerRadius="30dp"
-        app:cardElevation="30dp"
-        app:contentPadding="10dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView3">
-
-        <LinearLayout
-            android:id="@+id/childbox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <EditText
-                android:id="@+id/childname"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:layout_weight="1"
-                android:background="@drawable/feildbackground"
-                android:elegantTextHeight="false"
-                android:ems="10"
-                android:gravity="center"
-                android:hint="BODYGUARD CODE"
-                android:inputType="textPersonName"
-                android:padding="30dp"
-                android:textColor="@color/feildhint"
-                android:textColorHint="@color/feildhint" />
+                android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/childbtn"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:layout_weight="1"
-                android:background="@color/color1_parent"
-                android:fontFamily="sans-serif-black"
-                android:padding="20dp"
-                android:text="Add User"
-                android:textColor="@color/button_text"
-                android:textSize="20sp" />
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@drawable/icons8_guardian_64" />
 
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        app:cardBackgroundColor="@color/backgroundcolor"
-        app:cardCornerRadius="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardView2">
-
-        <ScrollView
-            android:id="@+id/scrollView2"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
-            android:layout_weight="1">
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:paddingRight="16dp"
+                    android:text="Guardian Mode"
+                    android:textColor="@color/feildtextcolor"
+                    android:textSize="34sp" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView15"
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
                     android:layout_marginTop="30dp"
-                    android:background="@drawable/bcktofirstbtn"
-                    android:fontFamily="sans-serif-light"
-                    android:padding="20dp"
-                    android:text="Add User By Entering Unique Id Avaliable in Profile Section Of Your Child"
-                    android:textAlignment="center"
-                    android:textColor="@color/lighttext2"
-                    android:textSize="24sp" />
+                    app:cardBackgroundColor="@color/secondary_parent"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="30dp"
+                    app:contentPadding="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/childbox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/guardianname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bcktofirstbtn"
+                            android:drawableStart="@drawable/user3"
+                            android:elegantTextHeight="false"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:hint="Full Name"
+                            android:inputType="textPersonName"
+                            android:maxLength="20"
+                            android:padding="30dp"
+                            android:textColor="@color/feildhint"
+                            android:textColorHint="@color/feildhint"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/guardiannumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bcktofirstbtn"
+                            android:drawableStart="@android:drawable/stat_sys_phone_call"
+                            android:elegantTextHeight="false"
+                            android:ems="10"
+                            android:foregroundTint="#E41010"
+                            android:gravity="center"
+                            android:hint="Phone Number"
+                            android:inputType="numberDecimal"
+                            android:maxLength="12"
+                            android:padding="30dp"
+                            android:textColor="@color/feildhint"
+                            android:textColorHint="@color/feildhint"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/childname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/bcktofirstbtn"
+                            android:drawableStart="@drawable/icons8_password_key_24__1_"
+                            android:elegantTextHeight="false"
+                            android:ems="10"
+                            android:gravity="center"
+                            android:hint="Guardian Code"
+                            android:inputType="textPersonName"
+                            android:padding="30dp"
+                            android:textColor="@color/feildhint"
+                            android:textColorHint="@color/feildhint"
+                            android:textSize="14sp" />
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/radi"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            app:cardCornerRadius="@dimen/fab_margin">
+
+                            <Button
+                                android:id="@+id/childbtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:background="#00FFFFFF"
+                                android:fontFamily="sans-serif-black"
+                                android:text="Add User"
+                                android:textColor="#212121"
+                                android:textSize="16sp" />
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    app:cardBackgroundColor="@color/bigbtntxtcolor"
+                    app:cardCornerRadius="10dp">
+
+                    <ScrollView
+                        android:id="@+id/scrollView2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/textView15"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/bcktofirstbtn"
+                                android:fontFamily="sans-serif-light"
+                                android:padding="20dp"
+                                android:text="You Can get Guardian Code from Profile Section Of the User You Want to Track "
+                                android:textAlignment="center"
+                                android:textColor="@color/lighttext2"
+                                android:textSize="16sp" />
+
+                        </LinearLayout>
+                    </ScrollView>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
-        </ScrollView>
-    </androidx.cardview.widget.CardView>
-
+        </LinearLayout>
+    </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -18,4 +18,13 @@
         <item name="colorAccent">@color/backgroundcolor</item>
     </style>
 
+    <style name="splashscreen" parent="SplashScreen.THESAVIOUR.FullscreenContainer">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/black</item>
+
+        <!-- Defining that new color in ColorPrimaryDark -->
+        <item name="colorPrimaryDark">@color/black</item>
+        <item name="colorAccent">@color/black</item>
+    </style>
+
 </resources>

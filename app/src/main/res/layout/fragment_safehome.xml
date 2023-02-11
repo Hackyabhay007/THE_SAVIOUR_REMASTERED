@@ -6,11 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundcolor"
-    tools:context=".safehome">
+    tools:context="com.hackydesk.thesaviour.safehome">
 
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
+        android:id="@+id/linearLayout4"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
@@ -26,92 +27,271 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="0dp"
-            android:layout_marginBottom="30dp"
             android:background="@color/bigbtnborder"
             android:measureAllChildren="true"
             android:persistentDrawingCache="animation"
+            android:visibility="gone"
             app:cardBackgroundColor="@color/bigbtnborder"
             app:cardCornerRadius="2dp"
             app:cardMaxElevation="30dp"
-            app:contentPadding="2dp">
+            app:contentPadding="2dp"
+            tools:visibility="gone">
 
             <TextView
                 android:id="@+id/topmssg"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:fontFamily="sans-serif-medium"
                 android:padding="20dp"
-                android:text="TAP FOR EMERGENCY"
+                android:text="TAP SOS FOR EMERGENCY"
                 android:textAlignment="center"
                 android:textColor="@color/lighttext"
                 android:textSize="25dp" />
 
         </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:id="@+id/linearLayout2"
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="vertical">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <androidx.cardview.widget.CardView
-                    android:id="@+id/dangermode"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-
-                    android:scaleType="center"
-                    app:cardBackgroundColor="#FDD835"
-                    app:cardCornerRadius="2000dp"
-                    app:cardElevation="30dp"
-                    tools:visibility="visible">
-
-                    <Button
-                        android:id="@+id/notsafe"
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/notsafebtn"
-                        android:fontFamily="sans-serif-black"
-                        android:text="I AM NOT SAFE"
-                        android:textColor="#FBE300"
-
-                        android:textSize="60sp"
-                        android:visibility="visible" />
-
-                </androidx.cardview.widget.CardView>
-
-            </FrameLayout>
-
-
-        </LinearLayout>
-
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView
-                android:id="@+id/output"
+            <androidx.cardview.widget.CardView
+                android:id="@+id/addresscontainer"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bcktofirstbtn"
-                android:padding="25dp"
-                android:text="TAP 5 TIMES IF  YOU FEEL UNSAFE"
-                android:textAlignment="center"
-                android:textColor="@color/lighttext2"
-                android:textSize="20sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.592" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                android:layout_margin="@dimen/fab_margin"
+                app:cardBackgroundColor="@color/mainmenutextcolor"
+                app:cardCornerRadius="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/s_Homie"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:text="Current Address"
+                            android:textSize="@dimen/_15sdp" />
+
+                        <Button
+                            android:id="@+id/share_address"
+                            style="@style/Widget.AppCompat.Button.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="@dimen/_10sdp"
+                            android:layout_weight="1"
+                            android:background="@color/black"
+                            android:stateListAnimator="@anim/nav_default_enter_anim"
+                            android:text="Share"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/user_address_homie"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:layout_weight="1"
+                        android:background="@color/white"
+                        android:fontFamily="sans-serif-light"
+                        android:padding="@dimen/_5ssp"
+                        android:text="Loading..."
+                        android:textSize="@dimen/_15sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.fragment.app.FragmentContainerView
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:context="com.example.mapwithmarker.MapsMarkerActivity" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/syncdata"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:background="@color/black"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Sync Data"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/countdowncontainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:visibility="invisible"
+                tools:visibility="visible">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="220sp"
+                    android:layout_height="220sp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/red"
+                    app:cardCornerRadius="240dp" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="200sp"
+                    android:layout_height="200sp"
+                    android:layout_gravity="center"
+                    app:cardBackgroundColor="@color/smallbtnbackground"
+                    app:cardCornerRadius="240dp">
+
+                    <TextView
+                        android:id="@+id/counter"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="40dp"
+                        android:gravity="bottom|right"
+                        android:text="5"
+                        android:textColor="@color/red"
+                        android:textSize="96sp" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/stopBtn"
+                            android:layout_width="304dp"
+                            android:layout_height="match_parent"
+                            android:layout_margin="20dp"
+                            android:alpha="0.5"
+                            android:ellipsize="none"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center_vertical"
+                            android:layerType="none"
+                            android:singleLine="true"
+                            android:text="STOP"
+                            android:textColor="@color/bigbtntxtcolor"
+                            android:textSize="34sp" />
+                    </FrameLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sosContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_80sdp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    app:cardBackgroundColor="@color/feildbackground"
+                    app:cardCornerRadius="40dp">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/colorstatecard"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            app:cardBackgroundColor="@color/red">
+
+                            <TextView
+                                android:id="@+id/textView38"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="@dimen/_6sdp"
+                                android:layout_marginBottom="@dimen/_6sdp"
+                                android:alpha="0.8"
+                                android:gravity="bottom|right"
+                                android:text="Share Device Location and Status"
+                                android:textColor="@color/feildhint"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <TextView
+                                android:id="@+id/sharejourney"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="right"
+                                android:fontFamily="sans-serif-light"
+                                android:gravity="right"
+                                android:padding="@dimen/_20sdp"
+                                android:text="SHARE JOURNEY"
+                                android:textAlignment="center"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sdp"
+                                android:visibility="visible"
+                                tools:visibility="visible" />
+
+                        </androidx.cardview.widget.CardView>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/dangermode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="top">
+
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent">
+
+                            <Button
+                                android:id="@+id/notsafe"
+                                android:layout_width="@dimen/_70sdp"
+                                android:layout_height="@dimen/_70sdp"
+                                android:layout_margin="@dimen/_10sdp"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:layout_marginTop="@dimen/_10sdp"
+                                android:layout_marginBottom="@dimen/_15sdp"
+
+                                android:background="@drawable/notsafebtn"
+                                android:fontFamily="sans-serif-black"
+                                android:text="SOS"
+                                android:textColor="@color/red"
+                                android:textSize="20sp"
+                                android:visibility="visible" />
+
+                        </FrameLayout>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

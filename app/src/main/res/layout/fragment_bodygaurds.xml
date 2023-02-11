@@ -7,49 +7,61 @@
     android:layout_height="match_parent"
     android:background="@color/backgroundcolor"
     android:backgroundTint="@color/backgroundcolor"
-    tools:context=".bodygaurds">
+    tools:context="com.hackydesk.thesaviour.bodyguards">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@color/bigbtnborder"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/AWAREMODE"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_60sdp"
+            android:layout_margin="20dp"
+            android:background="@drawable/bcktofirstbtn"
+            android:backgroundTint="@color/feildbackground"
+            android:drawableLeft="@drawable/icons8_guardian_64"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:gravity="fill_vertical"
+            android:text="MY GUARDIANS"
+            android:textAlignment="center"
+            android:textColor="@color/lighttext"
+            android:textSize="@dimen/_20sdp"
+            app:drawableTint="@color/bigbtnbgcolor" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/scrollView6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="top"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@color/bigbtnborder"
-                android:orientation="vertical">
-
-                <TextView
-                    android:id="@+id/AWAREMODE"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="20dp"
-                    android:background="@drawable/bcktofirstbtn"
-                    android:backgroundTint="@color/feildbackground"
-                    android:drawableLeft="@drawable/gaurd1"
-                    android:fontFamily="sans-serif-condensed-medium"
-                    android:padding="20dp"
-                    android:paddingTop="10dp"
-                    android:text="MY GUARDIANS"
-                    android:textAlignment="center"
-                    android:textColor="@color/lighttext"
-                    android:textSize="34sp"
-                    app:drawableTint="@color/bigbtnbgcolor" />
-
-            </LinearLayout>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/b1card"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:hapticFeedbackEnabled="true"
                 app:cardBackgroundColor="@color/black"
                 app:cardCornerRadius="20dp">
 
@@ -70,7 +82,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="43dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="BODY GAURD 1"
+                            android:text="GUARDIAN  1"
                             android:textColor="@color/lighttext2"
                             android:textSize="20sp" />
 
@@ -79,14 +91,6 @@
                             android:layout_height="33dp"
                             android:layout_marginTop="5dp"
                             android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/textView99"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="PHN.NO"
-                                android:textColor="@color/lighttext2" />
 
                             <TextView
                                 android:id="@+id/bnum1"
@@ -111,17 +115,23 @@
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:layout_marginTop="15dp"
-                            android:background="@drawable/feildbackground"
                             android:backgroundTint="@color/bigbtnborder"
+                            android:button="@drawable/bcktofirstbtn"
+                            android:buttonTintMode="src_over"
+                            android:checked="false"
                             android:padding="10dp"
-                            android:showText="false"
                             android:splitTrack="false"
                             android:switchTextAppearance="@style/TextAppearance.AppCompat.Body1"
-                            android:text="PRIMARY"
                             android:textAlignment="center"
-                            android:textColor="@color/lighttext"
+                            android:textColor="@color/black"
                             android:textColorHint="#FF0303"
-                            android:thumbTint="@color/bigbtnbgcolor" />
+                            android:textOff="SECONDARY"
+                            android:textOn="PRIMARY"
+                            android:thumbTint="@color/bigbtnborder"
+                            android:track="@drawable/trackswitch"
+                            android:visibility="gone"
+                            tools:checked="false"
+                            tools:visibility="gone" />
 
                     </LinearLayout>
 
@@ -130,9 +140,10 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/b2card"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:hapticFeedbackEnabled="true"
                 app:cardBackgroundColor="@color/bigbtnbgcolor"
                 app:cardCornerRadius="20dp">
 
@@ -153,7 +164,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="43dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="BODY GAURD 2"
+                            android:text="GUARDIAN 2"
                             android:textColor="@color/lighttext2"
                             android:textSize="20sp" />
 
@@ -162,14 +173,6 @@
                             android:layout_height="33dp"
                             android:layout_marginTop="5dp"
                             android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/texgtView10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="PHN.NO"
-                                android:textColor="@color/lighttext2" />
 
                             <TextView
                                 android:id="@+id/bnum2"
@@ -194,16 +197,39 @@
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:layout_marginTop="15dp"
-                            android:background="@drawable/feildbackground"
                             android:backgroundTint="@color/bigbtnborder"
+                            android:button="@drawable/bcktofirstbtn"
+                            android:buttonTintMode="src_over"
+                            android:checked="false"
                             android:padding="10dp"
-                            android:showText="false"
                             android:splitTrack="false"
+                            android:switchPadding="@dimen/_20sdp"
                             android:switchTextAppearance="@style/TextAppearance.AppCompat.Body1"
-                            android:text="PRIMARY"
                             android:textAlignment="center"
-                            android:textColor="@color/lighttext"
-                            android:thumbTint="@color/bigbtnbgcolor" />
+                            android:textColor="@color/black"
+                            android:textOff="SECONDARY"
+                            android:textOn="PRIMARY"
+                            android:thumbTint="@color/bigbtnborder"
+                            android:track="@drawable/trackswitch"
+                            android:visibility="gone"
+                            tools:checked="false"
+                            tools:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/addguardian2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="7dp"
+                            android:background="@color/bigbtnborder"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="+"
+                            android:textColor="@color/bigbtnbgcolor"
+                            android:textSize="@dimen/_15sdp"
+                            android:visibility="gone"
+                            tools:visibility="gone" />
 
                     </LinearLayout>
 
@@ -212,9 +238,10 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/b3card"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
+                android:hapticFeedbackEnabled="true"
                 app:cardBackgroundColor="@color/bigbtnbgcolor"
                 app:cardCornerRadius="20dp">
 
@@ -235,7 +262,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="43dp"
                             android:fontFamily="sans-serif-black"
-                            android:text="BODY GAURD 3"
+                            android:text="GUARDIAN 3"
                             android:textColor="@color/lighttext2"
                             android:textSize="20sp" />
 
@@ -244,14 +271,6 @@
                             android:layout_height="33dp"
                             android:layout_marginTop="5dp"
                             android:orientation="horizontal">
-
-                            <TextView
-                                android:id="@+id/textVfiew10"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="PHN.NO"
-                                android:textColor="@color/lighttext2" />
 
                             <TextView
                                 android:id="@+id/bnum3"
@@ -276,16 +295,38 @@
                             android:layout_width="match_parent"
                             android:layout_height="48dp"
                             android:layout_marginTop="15dp"
-                            android:background="@drawable/feildbackground"
                             android:backgroundTint="@color/bigbtnborder"
+                            android:button="@drawable/bcktofirstbtn"
+                            android:buttonTintMode="src_over"
+                            android:checked="false"
                             android:padding="10dp"
-                            android:showText="false"
                             android:splitTrack="false"
                             android:switchTextAppearance="@style/TextAppearance.AppCompat.Body1"
-                            android:text="PRIMARY"
                             android:textAlignment="center"
-                            android:textColor="@color/lighttext"
-                            android:thumbTint="@color/bigbtnbgcolor" />
+                            android:textColor="@color/black"
+                            android:textOff="SECONDARY"
+                            android:textOn="PRIMARY"
+                            android:thumbTint="@color/bigbtnborder"
+                            android:track="@drawable/trackswitch"
+                            tools:checked="false"
+                            tools:visibility="gone"
+                            android:visibility="gone" />
+
+                        <Button
+                            android:id="@+id/addguardian3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_margin="5dp"
+                            android:background="@color/bigbtnborder"
+                            android:fontFamily="sans-serif-medium"
+                            android:gravity="center"
+                            android:padding="10dp"
+                            android:text="+"
+                            android:textColor="@color/bigbtnbgcolor"
+                            android:textSize="@dimen/_15sdp"
+                            android:visibility="gone"
+                            tools:visibility="gone" />
 
                     </LinearLayout>
 
@@ -334,13 +375,20 @@
                         android:layout_height="wrap_content"
                         android:background="#000000"
                         android:padding="10dp"
-                        android:text="Primary is Required Because If Your Phone Is Out of network It will automatically call the primary one when you will initiate action"
-                        android:textAlignment="center"
+                        android:text="It  Rings The  Guardian Phone Louder When you Activate SOS mode either By Rapid Mode Or by Main Sos button. it Works Even If phone is not connected to internet , Uses Sms ."
+                        android:textAlignment="inherit"
                         android:textColor="@color/lighttext2" />
                 </LinearLayout>
 
             </androidx.cardview.widget.CardView>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom|center"
+                android:orientation="vertical">
+
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 

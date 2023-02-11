@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/first_time_bg"
+    tools:context=".userguide">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/guideclose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/bigbtnborder"
+            android:text="Close" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/textView39"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_10sdp"
+                        android:text="Steps To Link Guardian"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20sdp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/textView40"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_13sdp"
+                            android:text="Step 1 - Install The Saviour App in Guardian Phone"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <View
+                            android:id="@+id/divider19"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/textView41"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_13sdp"
+                            android:text="Step 2 - Opne App And Select Guardian Login"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <View
+                            android:id="@+id/divider20"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/textView43"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_13sdp"
+                            android:text="Step 3 -Share This Code With Guardian Only "
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                            <Button
+                                android:id="@+id/copyclipboard"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/_10sdp"
+                                android:backgroundTint="#000000"
+                                android:text="COPY"
+                                android:textColor="@color/white" />
+
+                            <Button
+                                android:id="@+id/button2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/fab_margin"
+                                android:backgroundTint="@color/bigbtnborder"
+                                android:gravity="center|fill_horizontal"
+                                android:text="SHARE GUARDIAN CODE"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                        <View
+                            android:id="@+id/divider21"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/textView46"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_13sdp"
+                            android:text="Step 4 - Enter Name And Paste  Guardian Code Obtained In Step 3"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <View
+                            android:id="@+id/divider22"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="?android:attr/listDivider" />
+
+                        <TextView
+                            android:id="@+id/textView44"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="@dimen/_13sdp"
+                            android:text="Step 4- Allow All The Permissions And Done"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_13sdp" />
+
+                        <View
+                            android:id="@+id/divider23"
+                            android:layout_width="match_parent"
+                            android:layout_height="5dp"
+                            android:background="?android:attr/listDivider" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/fab_margin">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/fab_margin"
+                        android:text="Guide For User"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_20ssp" />
+
+                    <TextView
+                        android:id="@+id/textView33"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/fab_margin"
+                        android:text="1. The Guardian Number You Will Add In Guardian Section Should Be Working and Same As The Device  Used By Guardian For using Guardian Mode Other Wise  Offline  SOS function May Not Work."
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:id="@+id/divider16"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/textView34"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/fab_margin"
+                        android:text="2. Share The Guardian Code Avaliable In Your Profile  Section  By which  Guardian Can Login"
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:id="@+id/divider17"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/textView36"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/fab_margin"
+                        android:text="We Send 2 Notifications For Sos Mode So That Guardian Can Get Your Emergency Message On Time"
+                        android:textColor="@color/white" />
+
+                    <View
+                        android:id="@+id/divider18"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:background="?android:attr/listDivider" />
+
+                    <TextView
+                        android:id="@+id/textView37"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/fab_margin"
+                        android:text="We Dont Send Any Data Without Your Permsiion. thats why You Have to Open  The  Saviour App  Atleast 3 Times A day So that Guardians Can Get Your Device Status and Last Location"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,52 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundcolor"
-    tools:context=".MainActivity">
+    android:background="#0F0E10"
+    tools:context="com.hackydesk.thesaviour.MainActivity">
 
-    <TextView
-        android:id="@+id/bname1"
-        android:layout_width="187dp"
-        android:layout_height="103dp"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/the"
-        android:textColor="#FFFFFF"
-        android:textSize="96sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="413dp"
-        android:layout_height="132dp"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/saviour"
-        android:textColor="#FFFFFF"
-        android:textSize="85sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="TextContrastCheck" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="440dp"
-        android:layout_height="442dp"
-        android:layout_marginBottom="16dp"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/your_own_body_gaurd"
-        android:textColor="#A6000000"
-        android:textSize="96sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srcCompat="@drawable/mainlog_transparent_bg" />
+</FrameLayout>

@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/backgroundcolor"
-    tools:context=".firsttime">
+    android:background="@drawable/first_time_bg"
+    android:orientation="vertical"
+    tools:context="com.hackydesk.thesaviour.firsttime">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.406">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/_20ssp"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="25dp"
             android:orientation="vertical">
@@ -31,23 +27,23 @@
                 android:fontFamily="sans-serif-black"
                 android:text="@string/login"
                 android:textColor="@color/lighttext2"
-                android:textSize="34sp" />
+                android:textSize="@dimen/_20ssp" />
 
             <Button
                 android:id="@+id/LOGIN"
-                android:layout_width="340dp"
+                android:layout_width="match_parent"
                 android:layout_height="103dp"
                 android:background="@color/btnbackgrouncolor"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/i_am_saviour"
                 android:textColor="@color/lighttext"
-                android:textSize="34sp" />
+                android:textSize="@dimen/_20sdp" />
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="@dimen/_12sdp"
             android:orientation="vertical">
 
             <TextView
@@ -57,24 +53,24 @@
                 android:fontFamily="sans-serif-black"
                 android:text="@string/register"
                 android:textColor="@color/lighttext2"
-                android:textSize="34sp" />
+                android:textSize="@dimen/_20ssp" />
 
             <Button
                 android:id="@+id/register"
-                android:layout_width="340dp"
+                android:layout_width="match_parent"
                 android:layout_height="103dp"
                 android:background="@color/btnbackgrouncolor"
                 android:fontFamily="sans-serif-black"
-                android:text="@string/i_am_saviour"
+                android:text="Become Saviour"
                 android:textColor="@color/lighttext"
-                android:textSize="34sp" />
+                android:textSize="@dimen/_20sdp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="@dimen/_10sdp"
             android:orientation="vertical">
 
             <TextView
@@ -82,21 +78,21 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="sans-serif-black"
-                android:text="PARENT MODE"
+                android:text="GUARDIAN MODE"
                 android:textColor="@color/lighttext2"
-                android:textSize="34sp" />
+                android:textSize="@dimen/_20ssp" />
 
             <Button
                 android:id="@+id/Parentmode"
-                android:layout_width="340dp"
+                android:layout_width="match_parent"
                 android:layout_height="103dp"
-                android:background="@color/btnbackgrouncolor"
+                android:background="@color/bigbtnborder"
                 android:fontFamily="sans-serif-black"
-                android:text="NEW USER"
+                android:text="GUardian Login"
                 android:textColor="@color/lighttext"
-                android:textSize="34sp" />
+                android:textSize="@dimen/_20sdp" />
         </LinearLayout>
 
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -2,26 +2,33 @@ plugins {
     id 'com.android.application'
     id 'com.google.gms.google-services'
     id 'com.google.android.libraries.mapsplatform.secrets-gradle-plugin'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.firebase.firebase-perf'
 
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
+
+        lintOptions {
+            checkReleaseBuilds false
+        }
     }
     // Add the block below if you're using Kotlin
 
     defaultConfig {
         applicationId "com.example.thesaviour"
         minSdk 21
-        targetSdk 32
+        targetSdk 33
         versionCode 1
-        versionName "1.0"
+        versionName "2.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
 
     buildTypes {
         release {
@@ -36,27 +43,51 @@ android {
     buildFeatures {
         viewBinding true
     }
-    namespace 'com.example.thesaviour'
+    namespace 'com.hackydesk.thesaviour'
 }
 
+
+
 dependencies {
-    implementation 'com.google.android.gms:play-services-location:21.0.0'
-    implementation platform('com.google.firebase:firebase-bom:31.0.0')
+    implementation 'com.google.android.gms:play-services-location:21.0.1'
+    implementation platform('com.google.firebase:firebase-bom:31.2.0')
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-database'
-    implementation  'com.google.gms:google-services:4.3.13'
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.6.1'
+    implementation  'com.google.gms:google-services:4.3.15'
+    implementation 'androidx.appcompat:appcompat:1.6.0'
+    implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
-    implementation 'androidx.navigation:navigation-fragment:2.3.5'
-    implementation 'androidx.navigation:navigation-ui:2.3.5'
-    implementation 'com.google.firebase:firebase-database:20.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.5.3'
+    implementation 'androidx.navigation:navigation-ui:2.5.3'
+    implementation 'com.google.firebase:firebase-database:20.1.0'
     implementation 'com.google.firebase:firebase-auth:21.1.0'
-    implementation 'com.google.firebase:firebase-firestore:24.4.0'
+    implementation 'com.google.firebase:firebase-firestore:24.4.2'
+    implementation platform('com.google.firebase:firebase-bom:31.2.0')
+    implementation 'com.google.firebase:firebase-messaging'
+    implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
-    implementation 'com.firebase:geofire-android-common:3.1.0'
+    implementation 'com.firebase:geofire-android-common:3.2.0'
     implementation 'androidx.annotation:annotation:1.5.0'
+    implementation 'com.firebase:geofire-android:3.2.0'
+
+    // GeoFire utililty functions for Cloud Firestore users who
+    // want to implement their own geo solution, see:
+    // https://firebase.google.com/docs/firestore/solutions/geoqueries
+    implementation 'com.firebase:geofire-android-common:3.2.0'
+    implementation 'com.google.firebase:firebase-messaging:23.1.1'
+    implementation 'com.google.firebase:firebase-crashlytics:18.3.3'
+    implementation 'com.google.firebase:firebase-perf:20.3.1'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    implementation platform('com.google.firebase:firebase-bom:31.2.0')
+    implementation "androidx.work:work-runtime:2.7.1"
+    implementation 'com.google.firebase:firebase-messaging-directboot:23.1.1'
+    implementation 'com.android.volley:volley:1.2.1'
+    implementation 'androidx.work:work-runtime-ktx:2.8.0-rc01'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+
+
+
 }

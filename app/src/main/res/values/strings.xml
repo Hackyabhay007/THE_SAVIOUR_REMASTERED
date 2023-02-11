@@ -27,5 +27,11 @@
     <string name="title_activity_afterlogin">afterlogin</string>
     <string name="title_activity_main2">MainActivity2</string>
     <string name="tracking_enabled_notif" />
-    <string name="mapbox_access_token">pk.eyJ1IjoiaGFja3lhYmhheSIsImEiOiJjbGJ3YmxmbnowdnAyM3FueTI0azl0eWk0In0.ECf6ppvlc05hneRwfKpdSA</string>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="child_name">Child Name :</string>
+    <string name="todo">TODO</string>
+    <string name="loading">Loading...</string>
+    <string name="todo1">TODO</string>
+    <string name="hy">hy</string>
+    <string name="hy2">hy2</string>
 </resources>

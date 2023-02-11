@@ -6,693 +6,650 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundcolor"
-    tools:context=".emergencydailer">
+    tools:context="com.hackydesk.thesaviour.emergencydailer">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <LinearLayout
+        android:id="@+id/linearLayout13"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:layout_editor_absoluteY="110dp">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/emgdailer"
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/backgroundcolor"
-            tools:visibility="gone" />
+            android:layout_height="wrap_content">
 
-    </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/linearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bigbtnborder"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/scrollView6"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-        <LinearLayout
+                    <TextView
+                        android:id="@+id/AWAREMODE"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_60sdp"
+                        android:layout_margin="20dp"
+                        android:background="@drawable/bcktofirstbtn"
+                        android:backgroundTint="@color/feildbackground"
+                        android:drawableLeft="@drawable/blackphone"
+                        android:fontFamily="sans-serif-condensed-medium"
+                        android:gravity="fill_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="Emergency Dialer"
+                        android:textAlignment="center"
+                        android:textColor="@color/lighttext"
+                        android:textSize="@dimen/_20sdp"
+                        app:drawableTint="@color/bigbtnbgcolor" />
+
+                </FrameLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent">
 
             <LinearLayout
-                android:id="@+id/l1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <LinearLayout
-                    android:layout_width="410dp"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imagdeView"
-                        android:layout_width="76dp"
-                        android:layout_height="wrap_content"
-                        android:background="#00FDD835"
-                        android:contentDescription="TODO"
-                        android:foregroundTint="#FF0000"
-                        app:srcCompat="@drawable/registerhead" />
+                    android:id="@+id/l1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="265dp"
-                        android:layout_height="57dp"
-                        android:layout_marginTop="12dp"
-                        android:orientation="vertical">
+                        android:layout_width="410dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/ssbnadme1"
-                            android:layout_width="142dp"
+                        <ImageView
+                            android:id="@+id/imagdeView"
+                            android:layout_width="76dp"
                             android:layout_height="wrap_content"
-                            android:text="POLICE"
-                            android:textColor="#FF4F0A" />
+                            android:background="#00FDD835"
+                            android:contentDescription="TODO"
+                            android:foregroundTint="#FF0000"
+                            app:srcCompat="@drawable/registerhead" />
 
-                        <TextView
-                            android:id="@+id/n1"
-                            android:layout_width="149dp"
-                            android:layout_height="32dp"
-                            android:background="#00F3EFEF"
-                            android:text="100"
-                            android:textAlignment="gravity"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="#FFFFFF"
-                            android:textDirection="firstStrong"
-                            android:textStyle="normal" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="57dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/ssbnadme1"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:text="POLICE"
+                                android:textColor="#FF4F0A" />
+
+                            <TextView
+                                android:id="@+id/n1"
+                                android:layout_width="149dp"
+                                android:layout_height="32dp"
+                                android:background="#00F3EFEF"
+                                android:text="100"
+                                android:textAlignment="gravity"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textColor="#FFFFFF"
+                                android:textDirection="firstStrong"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@+id/CALLNOW1"
-                        android:layout_width="44dp"
-                        android:layout_height="47dp"
-                        android:layout_margin="10dp"
-                        android:rotationX="-190"
-                        app:srcCompat="@android:drawable/ic_menu_call" />
+                        android:id="@+id/imassgeViedw2"
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:layout_marginBottom="16dp"
+                        app:srcCompat="@drawable/buttonbg" />
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imassgeViedw2"
-                    android:layout_width="match_parent"
-                    android:layout_height="14dp"
-                    android:layout_marginBottom="16dp"
-                    app:srcCompat="@drawable/buttonbg" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/l2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
                 <LinearLayout
-                    android:layout_width="410dp"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imageVidessssw"
-                        android:layout_width="76dp"
-                        android:layout_height="wrap_content"
-                        android:background="#00FDD835"
-                        android:contentDescription="TODO"
-                        android:foregroundTint="#FF0000"
-                        app:srcCompat="@drawable/registerhead" />
+                    android:id="@+id/l2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="265dp"
-                        android:layout_height="57dp"
-                        android:layout_marginTop="12dp"
-                        android:orientation="vertical">
+                        android:layout_width="410dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/bnadme1"
-                            android:layout_width="142dp"
+                        <ImageView
+                            android:id="@+id/imageVidessssw"
+                            android:layout_width="76dp"
                             android:layout_height="wrap_content"
-                            android:text="FIRE BRIGADE"
-                            android:textColor="#FF4F0A" />
+                            android:background="#00FDD835"
+                            android:contentDescription="TODO"
+                            android:foregroundTint="#FF0000"
+                            app:srcCompat="@drawable/registerhead" />
 
-                        <TextView
-                            android:id="@+id/n2"
-                            android:layout_width="149dp"
-                            android:layout_height="32dp"
-                            android:background="#00F3EFEF"
-                            android:text="101"
-                            android:textAlignment="gravity"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="#FFFFFF"
-                            android:textDirection="firstStrong"
-                            android:textStyle="normal" />
+                        <LinearLayout
+                            android:layout_width="152dp"
+                            android:layout_height="57dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bnadme1"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:text="FIRE BRIGADE"
+                                android:textColor="#FF4F0A" />
+
+                            <TextView
+                                android:id="@+id/n2"
+                                android:layout_width="149dp"
+                                android:layout_height="32dp"
+                                android:background="#00F3EFEF"
+                                android:text="101"
+                                android:textAlignment="gravity"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textColor="#FFFFFF"
+                                android:textDirection="firstStrong"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@+id/CALLNOW2"
-                        android:layout_width="44dp"
-                        android:layout_height="47dp"
-                        android:layout_margin="10dp"
-                        android:rotationX="-190"
-                        app:srcCompat="@android:drawable/ic_menu_call" />
+                        android:id="@+id/imageViedw2"
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:layout_marginBottom="16dp"
+                        app:srcCompat="@drawable/buttonbg" />
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imageViedw2"
-                    android:layout_width="match_parent"
-                    android:layout_height="14dp"
-                    android:layout_marginBottom="16dp"
-                    app:srcCompat="@drawable/buttonbg" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/l3"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
                 <LinearLayout
-                    android:layout_width="410dp"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imageVidew"
-                        android:layout_width="76dp"
-                        android:layout_height="wrap_content"
-                        android:background="#00FDD835"
-                        android:contentDescription="TODO"
-                        android:foregroundTint="#FF0000"
-                        app:srcCompat="@drawable/registerhead" />
+                    android:id="@+id/l3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="265dp"
-                        android:layout_height="57dp"
-                        android:layout_marginTop="12dp"
-                        android:orientation="vertical">
+                        android:layout_width="410dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/bndame1"
-                            android:layout_width="142dp"
+                        <ImageView
+                            android:id="@+id/imageVidew"
+                            android:layout_width="76dp"
                             android:layout_height="wrap_content"
-                            android:text="AMBULANCE"
-                            android:textColor="#FF4F0A" />
+                            android:background="#00FDD835"
+                            android:contentDescription="TODO"
+                            android:foregroundTint="#FF0000"
+                            app:srcCompat="@drawable/registerhead" />
 
-                        <TextView
-                            android:id="@+id/n3"
-                            android:layout_width="149dp"
-                            android:layout_height="32dp"
-                            android:background="#00F3EFEF"
-                            android:text="102"
-                            android:textAlignment="gravity"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="#FFFFFF"
-                            android:textDirection="firstStrong"
-                            android:textStyle="normal" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="57dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bndame1"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:text="AMBULANCE"
+                                android:textColor="#FF4F0A" />
+
+                            <TextView
+                                android:id="@+id/n3"
+                                android:layout_width="149dp"
+                                android:layout_height="32dp"
+                                android:background="#00F3EFEF"
+                                android:text="102"
+                                android:textAlignment="gravity"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textColor="#FFFFFF"
+                                android:textDirection="firstStrong"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@+id/CALLNOW3"
-                        android:layout_width="44dp"
-                        android:layout_height="47dp"
-                        android:layout_margin="10dp"
-                        android:rotationX="-190"
-                        app:srcCompat="@android:drawable/ic_menu_call" />
+                        android:id="@+id/imageViewd2"
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:layout_marginBottom="16dp"
+                        app:srcCompat="@drawable/buttonbg" />
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imageViewd2"
-                    android:layout_width="match_parent"
-                    android:layout_height="14dp"
-                    android:layout_marginBottom="16dp"
-                    app:srcCompat="@drawable/buttonbg" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/l4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
                 <LinearLayout
-                    android:layout_width="410dp"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imageViddew"
-                        android:layout_width="76dp"
-                        android:layout_height="wrap_content"
-                        android:background="#00FDD835"
-                        android:contentDescription="TODO"
-                        android:foregroundTint="#FF0000"
-                        app:srcCompat="@drawable/registerhead" />
+                    android:id="@+id/l4"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="265dp"
-                        android:layout_height="57dp"
-                        android:layout_marginTop="12dp"
-                        android:orientation="vertical">
+                        android:layout_width="410dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/bname1"
-                            android:layout_width="142dp"
+                        <ImageView
+                            android:id="@+id/imageViddew"
+                            android:layout_width="76dp"
                             android:layout_height="wrap_content"
-                            android:text="Air Ambulance"
-                            android:textColor="#FF4F0A" />
+                            android:background="#00FDD835"
+                            android:contentDescription="TODO"
+                            android:foregroundTint="#FF0000"
+                            app:srcCompat="@drawable/registerhead" />
 
-                        <TextView
-                            android:id="@+id/n4"
-                            android:layout_width="149dp"
-                            android:layout_height="32dp"
-                            android:background="#00F3EFEF"
-                            android:text="9540161344 "
-                            android:textAlignment="gravity"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="#FFFFFF"
-                            android:textDirection="firstStrong"
-                            android:textStyle="normal" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="57dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bname1"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:text="Air Ambulance"
+                                android:textColor="#FF4F0A" />
+
+                            <TextView
+                                android:id="@+id/n4"
+                                android:layout_width="149dp"
+                                android:layout_height="32dp"
+                                android:background="#00F3EFEF"
+                                android:text="9540161344 "
+                                android:textAlignment="gravity"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textColor="#FFFFFF"
+                                android:textDirection="firstStrong"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@+id/CALLNOW4"
-                        android:layout_width="44dp"
-                        android:layout_height="47dp"
-                        android:layout_margin="10dp"
-                        android:rotationX="-190"
-                        app:srcCompat="@android:drawable/ic_menu_call" />
+                        android:id="@+id/imsssageVissew2"
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:layout_marginBottom="16dp"
+                        app:srcCompat="@drawable/buttonbg" />
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imsssageVissew2"
-                    android:layout_width="match_parent"
-                    android:layout_height="14dp"
-                    android:layout_marginBottom="16dp"
-                    app:srcCompat="@drawable/buttonbg" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/l5"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
                 <LinearLayout
-                    android:layout_width="410dp"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imagsseView"
-                        android:layout_width="76dp"
-                        android:layout_height="wrap_content"
-                        android:background="#00FDD835"
-                        android:contentDescription="TODO"
-                        android:foregroundTint="#FF0000"
-                        app:srcCompat="@drawable/registerhead" />
+                    android:id="@+id/l5"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="265dp"
-                        android:layout_height="57dp"
-                        android:layout_marginTop="12dp"
-                        android:orientation="vertical">
+                        android:layout_width="410dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/bssname1"
-                            android:layout_width="142dp"
+                        <ImageView
+                            android:id="@+id/imagsseView"
+                            android:layout_width="76dp"
                             android:layout_height="wrap_content"
-                            android:text="Child Helpline"
-                            android:textColor="#FF4F0A" />
+                            android:background="#00FDD835"
+                            android:contentDescription="TODO"
+                            android:foregroundTint="#FF0000"
+                            app:srcCompat="@drawable/registerhead" />
 
-                        <TextView
-                            android:id="@+id/n6"
-                            android:layout_width="149dp"
-                            android:layout_height="32dp"
-                            android:background="#00F3EFEF"
-                            android:text="181"
-                            android:textAlignment="gravity"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="#FFFFFF"
-                            android:textDirection="firstStrong"
-                            android:textStyle="normal" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="57dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bssname1"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:text="Child Helpline"
+                                android:textColor="#FF4F0A" />
+
+                            <TextView
+                                android:id="@+id/n6"
+                                android:layout_width="149dp"
+                                android:layout_height="32dp"
+                                android:background="#00F3EFEF"
+                                android:text="181"
+                                android:textAlignment="gravity"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textColor="#FFFFFF"
+                                android:textDirection="firstStrong"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@+id/CALLNOW5"
-                        android:layout_width="44dp"
-                        android:layout_height="47dp"
-                        android:layout_margin="10dp"
-                        android:rotationX="-190"
-                        app:srcCompat="@android:drawable/ic_menu_call" />
+                        android:id="@+id/imageVissew2"
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:layout_marginBottom="16dp"
+                        app:srcCompat="@drawable/buttonbg" />
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imageVissew2"
-                    android:layout_width="match_parent"
-                    android:layout_height="14dp"
-                    android:layout_marginBottom="16dp"
-                    app:srcCompat="@drawable/buttonbg" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/l6"
-                android:layout_width="411dp"
-                android:layout_height="89dp"
-                android:orientation="vertical">
-
                 <LinearLayout
-                    android:layout_width="410dp"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imasssgeView"
-                        android:layout_width="76dp"
-                        android:layout_height="wrap_content"
-                        android:background="#00FDD835"
-                        android:contentDescription="TODO"
-                        android:foregroundTint="#FF0000"
-                        app:srcCompat="@drawable/registerhead" />
+                    android:id="@+id/l6"
+                    android:layout_width="411dp"
+                    android:layout_height="89dp"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="265dp"
-                        android:layout_height="57dp"
-                        android:layout_marginTop="12dp"
-                        android:orientation="vertical">
+                        android:layout_width="410dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/bnssssame1"
-                            android:layout_width="142dp"
+                        <ImageView
+                            android:id="@+id/imasssgeView"
+                            android:layout_width="76dp"
                             android:layout_height="wrap_content"
-                            android:text="Women Helpline"
-                            android:textColor="#FF4F0A" />
+                            android:background="#00FDD835"
+                            android:contentDescription="TODO"
+                            android:foregroundTint="#FF0000"
+                            app:srcCompat="@drawable/registerhead" />
 
-                        <TextView
-                            android:id="@+id/n5"
-                            android:layout_width="149dp"
-                            android:layout_height="32dp"
-                            android:background="#00F3EFEF"
-                            android:text="1098"
-                            android:textAlignment="gravity"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="#FFFFFF"
-                            android:textDirection="firstStrong"
-                            android:textStyle="normal" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="57dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bnssssame1"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:text="Women Helpline"
+                                android:textColor="#FF4F0A" />
+
+                            <TextView
+                                android:id="@+id/n5"
+                                android:layout_width="149dp"
+                                android:layout_height="32dp"
+                                android:background="#00F3EFEF"
+                                android:text="1098"
+                                android:textAlignment="gravity"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textColor="#FFFFFF"
+                                android:textDirection="firstStrong"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@+id/CALLNOW6"
-                        android:layout_width="44dp"
-                        android:layout_height="47dp"
-                        android:layout_margin="10dp"
-                        android:rotationX="-190"
-                        app:srcCompat="@android:drawable/ic_menu_call" />
+                        android:id="@+id/imageVssssiew2"
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:layout_marginBottom="16dp"
+                        app:srcCompat="@drawable/buttonbg" />
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imageVssssiew2"
-                    android:layout_width="match_parent"
-                    android:layout_height="14dp"
-                    android:layout_marginBottom="16dp"
-                    app:srcCompat="@drawable/buttonbg" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/l7"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
                 <LinearLayout
-                    android:layout_width="410dp"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imagsseVievvvvvvw"
-                        android:layout_width="76dp"
-                        android:layout_height="wrap_content"
-                        android:background="#00FDD835"
-                        android:contentDescription="TODO"
-                        android:foregroundTint="#FF0000"
-                        app:srcCompat="@drawable/registerhead" />
+                    android:id="@+id/l7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="265dp"
-                        android:layout_height="57dp"
-                        android:layout_marginTop="12dp"
-                        android:orientation="vertical">
+                        android:layout_width="410dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/bssname1vvvv"
-                            android:layout_width="142dp"
+                        <ImageView
+                            android:id="@+id/imagsseVievvvvvvw"
+                            android:layout_width="76dp"
                             android:layout_height="wrap_content"
-                            android:text="Gas Lekage"
-                            android:textColor="#FF4F0A" />
+                            android:background="#00FDD835"
+                            android:contentDescription="TODO"
+                            android:foregroundTint="#FF0000"
+                            app:srcCompat="@drawable/registerhead" />
 
-                        <TextView
-                            android:id="@+id/n7"
-                            android:layout_width="149dp"
-                            android:layout_height="32dp"
-                            android:background="#00F3EFEF"
-                            android:text="1906"
-                            android:textAlignment="gravity"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="#FFFFFF"
-                            android:textDirection="firstStrong"
-                            android:textStyle="normal" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="57dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bssname1vvvv"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:text="Gas Lekage"
+                                android:textColor="#FF4F0A" />
+
+                            <TextView
+                                android:id="@+id/n7"
+                                android:layout_width="149dp"
+                                android:layout_height="32dp"
+                                android:background="#00F3EFEF"
+                                android:text="1906"
+                                android:textAlignment="gravity"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textColor="#FFFFFF"
+                                android:textDirection="firstStrong"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@+id/CALLNOvvvW5"
-                        android:layout_width="44dp"
-                        android:layout_height="47dp"
-                        android:layout_margin="10dp"
-                        android:rotationX="-190"
-                        app:srcCompat="@android:drawable/ic_menu_call" />
+                        android:id="@+id/imageVissewvv2"
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:layout_marginBottom="16dp"
+                        app:srcCompat="@drawable/buttonbg" />
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imageVissewvv2"
-                    android:layout_width="match_parent"
-                    android:layout_height="14dp"
-                    android:layout_marginBottom="16dp"
-                    app:srcCompat="@drawable/buttonbg" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/l8"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
                 <LinearLayout
-                    android:layout_width="410dp"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imagsseVvview"
-                        android:layout_width="76dp"
-                        android:layout_height="wrap_content"
-                        android:background="#00FDD835"
-                        android:contentDescription="TODO"
-                        android:foregroundTint="#FF0000"
-                        app:srcCompat="@drawable/registerhead" />
+                    android:id="@+id/l8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="265dp"
-                        android:layout_height="57dp"
-                        android:layout_marginTop="12dp"
-                        android:orientation="vertical">
+                        android:layout_width="410dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/bssnamvve1"
-                            android:layout_width="142dp"
+                        <ImageView
+                            android:id="@+id/imagsseVvview"
+                            android:layout_width="76dp"
                             android:layout_height="wrap_content"
-                            android:text="Tourist Helpline"
-                            android:textColor="#FF4F0A" />
+                            android:background="#00FDD835"
+                            android:contentDescription="TODO"
+                            android:foregroundTint="#FF0000"
+                            app:srcCompat="@drawable/registerhead" />
 
-                        <TextView
-                            android:id="@+id/n8"
-                            android:layout_width="149dp"
-                            android:layout_height="32dp"
-                            android:background="#00F3EFEF"
-                            android:text="1363"
-                            android:textAlignment="gravity"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="#FFFFFF"
-                            android:textDirection="firstStrong"
-                            android:textStyle="normal" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="57dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bssnamvve1"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:text="Tourist Helpline"
+                                android:textColor="#FF4F0A" />
+
+                            <TextView
+                                android:id="@+id/n8"
+                                android:layout_width="149dp"
+                                android:layout_height="32dp"
+                                android:background="#00F3EFEF"
+                                android:text="1363"
+                                android:textAlignment="gravity"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textColor="#FFFFFF"
+                                android:textDirection="firstStrong"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@+id/CALLNOWvvvvvvv5"
-                        android:layout_width="44dp"
-                        android:layout_height="47dp"
-                        android:layout_margin="10dp"
-                        android:rotationX="-190"
-                        app:srcCompat="@android:drawable/ic_menu_call" />
+                        android:id="@+id/imageVissewfffff2"
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:layout_marginBottom="16dp"
+                        app:srcCompat="@drawable/buttonbg" />
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imageVissewfffff2"
-                    android:layout_width="match_parent"
-                    android:layout_height="14dp"
-                    android:layout_marginBottom="16dp"
-                    app:srcCompat="@drawable/buttonbg" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/l9"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
                 <LinearLayout
-                    android:layout_width="410dp"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imagsseffffffffView"
-                        android:layout_width="76dp"
-                        android:layout_height="wrap_content"
-                        android:background="#00FDD835"
-                        android:contentDescription="TODO"
-                        android:foregroundTint="#FF0000"
-                        app:srcCompat="@drawable/registerhead" />
+                    android:id="@+id/l9"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="265dp"
-                        android:layout_height="57dp"
-                        android:layout_marginTop="12dp"
-                        android:orientation="vertical">
+                        android:layout_width="410dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/bssssssssname1"
-                            android:layout_width="142dp"
+                        <ImageView
+                            android:id="@+id/imagsseffffffffView"
+                            android:layout_width="76dp"
                             android:layout_height="wrap_content"
-                            android:text="Cyber Crime Reporting"
-                            android:textColor="#FF4F0A" />
+                            android:background="#00FDD835"
+                            android:contentDescription="TODO"
+                            android:foregroundTint="#FF0000"
+                            app:srcCompat="@drawable/registerhead" />
 
-                        <TextView
-                            android:id="@+id/n9"
-                            android:layout_width="149dp"
-                            android:layout_height="32dp"
-                            android:background="#00F3EFEF"
-                            android:text="1930"
-                            android:textAlignment="gravity"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="#FFFFFF"
-                            android:textDirection="firstStrong"
-                            android:textStyle="normal" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="57dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bssssssssname1"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:text="Cyber Crime Reporting"
+                                android:textColor="#FF4F0A" />
+
+                            <TextView
+                                android:id="@+id/n9"
+                                android:layout_width="149dp"
+                                android:layout_height="32dp"
+                                android:background="#00F3EFEF"
+                                android:text="1930"
+                                android:textAlignment="gravity"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textColor="#FFFFFF"
+                                android:textDirection="firstStrong"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@+id/CAssssssLLNOW5"
-                        android:layout_width="44dp"
-                        android:layout_height="47dp"
-                        android:layout_margin="10dp"
-                        android:rotationX="-190"
-                        app:srcCompat="@android:drawable/ic_menu_call" />
+                        android:id="@+id/imageVssssssissew2"
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:layout_marginBottom="16dp"
+                        app:srcCompat="@drawable/buttonbg" />
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imageVssssssissew2"
-                    android:layout_width="match_parent"
-                    android:layout_height="14dp"
-                    android:layout_marginBottom="16dp"
-                    app:srcCompat="@drawable/buttonbg" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/l10"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-
                 <LinearLayout
-                    android:layout_width="410dp"
-                    android:layout_height="80dp"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:id="@+id/imagssdddeView"
-                        android:layout_width="76dp"
-                        android:layout_height="wrap_content"
-                        android:background="#00FDD835"
-                        android:contentDescription="TODO"
-                        android:foregroundTint="#FF0000"
-                        app:srcCompat="@drawable/registerhead" />
+                    android:id="@+id/l10"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
 
                     <LinearLayout
-                        android:layout_width="265dp"
-                        android:layout_height="57dp"
-                        android:layout_marginTop="12dp"
-                        android:orientation="vertical">
+                        android:layout_width="410dp"
+                        android:layout_height="80dp"
+                        android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/bsdddsname1"
-                            android:layout_width="142dp"
+                        <ImageView
+                            android:id="@+id/imagssdddeView"
+                            android:layout_width="76dp"
                             android:layout_height="wrap_content"
-                            android:text="Senior Citizen Helpline"
-                            android:textColor="#FF4F0A" />
+                            android:background="#00FDD835"
+                            android:contentDescription="TODO"
+                            android:foregroundTint="#FF0000"
+                            app:srcCompat="@drawable/registerhead" />
 
-                        <TextView
-                            android:id="@+id/n10"
-                            android:layout_width="149dp"
-                            android:layout_height="32dp"
-                            android:background="#00F3EFEF"
-                            android:text="14567"
-                            android:textAlignment="gravity"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-                            android:textColor="#FFFFFF"
-                            android:textDirection="firstStrong"
-                            android:textStyle="normal" />
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="57dp"
+                            android:layout_marginTop="12dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/bsdddsname1"
+                                android:layout_width="142dp"
+                                android:layout_height="wrap_content"
+                                android:text="Senior Citizen Helpline"
+                                android:textColor="#FF4F0A" />
+
+                            <TextView
+                                android:id="@+id/n10"
+                                android:layout_width="149dp"
+                                android:layout_height="32dp"
+                                android:background="#00F3EFEF"
+                                android:text="14567"
+                                android:textAlignment="gravity"
+                                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                                android:textColor="#FFFFFF"
+                                android:textDirection="firstStrong"
+                                android:textStyle="normal" />
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
                     <ImageView
-                        android:id="@+id/CddddALLNOW5"
-                        android:layout_width="44dp"
-                        android:layout_height="47dp"
-                        android:layout_margin="10dp"
-                        android:rotationX="-190"
-                        app:srcCompat="@android:drawable/ic_menu_call" />
+                        android:id="@+id/imageVisgggggsew2"
+                        android:layout_width="match_parent"
+                        android:layout_height="14dp"
+                        android:layout_marginBottom="16dp"
+                        app:srcCompat="@drawable/buttonbg" />
 
                 </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imageVisgggggsew2"
-                    android:layout_width="match_parent"
-                    android:layout_height="14dp"
-                    android:layout_marginBottom="16dp"
-                    app:srcCompat="@drawable/buttonbg" />
-
             </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
+    </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

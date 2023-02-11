@@ -1,78 +1,156 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    <!-- Recommended for Android 9 (API level 28) and lower. -->
-    <!-- Required for Android 10 (API level 29) and higher. -->
+
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
-    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission
+        android:name="android.permission.POST_NOTIFICATIONS"
+        tools:node="remove" />
+    <uses-permission android:name="android.permission.VIBRATE" /> <!-- <uses-permission android:name="android.permission.CAMERA" /> -->
+    <!-- <uses-permission android:name="android.permission.RECORD_AUDIO" /> -->
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/coollogo1"
+        android:icon="@drawable/redthesaviour"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/coollogo1"
+        android:roundIcon="@drawable/redthesaviour"
         android:supportsRtl="true"
         android:theme="@style/DemoTheme"
         tools:targetApi="31">
         <activity
-            android:name=".Parent_Activity"
+            android:name=".linkparent"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".userguide"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".StopActivity"
             android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
 
+        <service
+            android:name=".sharejourneyservice"
+            android:enabled="true"
+            android:exported="true" />
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY" />
+            android:value="AIzaSyDC8VgCougGk-CNl9pq5-vM7ul4ZoeASm8" />
+
+        <activity
+            android:name=".parent_settings"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
 
         <activity
             android:name=".AllPermissionAtOnce"
-            android:exported="true" />
-
-        <receiver
-            android:name=".BackgroundListenerforDangermode"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.media.VOLUME_CHANGED_ACTION" />
-            </intent-filter>
-        </receiver>
+            android:exported="true"
+            android:screenOrientation="portrait" />
 
         <service
             android:name=".DangerModeBackgroundListener"
-            android:enabled="true"
-            android:exported="true" />
-        <service
-            android:name=".ParentAlertService"
-            android:enabled="true"
-            android:exported="true" />
+            android:exported="true"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
 
-        <activity
-            android:name=".ParentMode"
-            android:exported="true" />
-        <activity
-            android:name=".parenthome"
-            android:exported="true" />
-
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_keyevents_in_background" />
+        </service>
         <service
             android:name=".DangerModeService"
             android:enabled="true"
-            android:exported="true" />
+            android:exported="true"
+            android:foregroundServiceType="location"
+            android:launchMode="singleTop">
+
+            <!-- Any inner elements would go here. -->
+        </service>
+        <service
+            android:name=".FirebaseMessagingService"
+            android:exported="true"
+            android:permission="TODO"
+            tools:ignore="ExportedService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <!--
+ Set custom default icon. This is used when no icon is set for incoming notification messages.
+     See README(https://goo.gl/l4GJaQ) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/mainlog_transparent_bg" />
+        <!--
+ Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/red" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="FIREBASE_NOTIFICATION" />
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
 
         <activity
+            android:name=".ParentMode"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".parenthome"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".offlineSosActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".MainActivity"
-            android:exported="true">
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/THESAVIOUR.BLACK">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -80,23 +158,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".bodygaurdactivity"
-            android:exported="true" />
-        <activity
             android:name=".firsttime"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".login"
             android:exported="true" />
         <activity
             android:name=".userregister"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".UserProfile"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".homie"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/DemoTheme" />
 
         <receiver
             android:name=".MessageRecieveBroadcaster"
