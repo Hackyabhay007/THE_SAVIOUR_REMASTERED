@@ -5,6 +5,18 @@
 
 The Saviour - Emergency Toolkit is a comprehensive mobile application that provides various emergency features to ensure user safety and security. It offers both online and offline SOS modes, a share journey feature, emergency dialer, rapid SOS activation, manage guardians, share address functionality, and a "Make India Safe" feature where users can contribute by submitting reviews about their area. The app aims to make the country safer by providing essential emergency tools and enabling users to share their experiences.
 
+<div align="center">
+  <h2>Screenshots</h2>
+  <p align="center">
+    <img src="https://play-lh.googleusercontent.com/z_I9L1ZHaD_p95vfFjANnL200-UUaRiW6FWu3h9HyEvmriVhiAn-PgtW9VzThMtajoo=w2560-h1440-rw" alt="Screenshot 1" width="30%">
+    <img src="https://play-lh.googleusercontent.com/6OpPVoJiGklDvlnIwtx7ma6OdspwwuhZoLRyi4QjX6SD1AeC1pWwFiz5p0SxyQbYowA=w2560-h1440-rw" alt="Screenshot 2" width="30%">
+    <img src="https://play-lh.googleusercontent.com/7a9ZtlJg2_sXDPUJdjrZkKxy-sxVfCLLnkBgI2gVV51su9A6AHe2o9feSPGP70dhrg=w2560-h1440-rw" alt="Screenshot 3" width="30%">
+    <img src="https://play-lh.googleusercontent.com/nq2wXeASNseEQOwwrtL41a1-LASCMYeyOezM4UCMGEUGMslIKZumISCzEwWTNCYUYz0=w2560-h1440-rw" alt="Screenshot 4" width="30%">
+    <img src="https://play-lh.googleusercontent.com/yo23ewc3uKoXxkAtE9LpIYCkYjrHQzLAtWU8Q-oLr3UQXTf_ONNV_D2vVynD2vGwuw=w2560-h1440-rw" alt="Screenshot 5" width="30%">
+  </p>
+</div>
+
+
 ## Tech Stack
 
 - Programming Languages: Java, XML
